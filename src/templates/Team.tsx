@@ -1,45 +1,41 @@
-import Link from 'next/link';
-import { FaLinkedin } from 'react-icons/fa';
-import { FaSquareXTwitter } from 'react-icons/fa6';
-import { MdEmail } from 'react-icons/md';
+import { FaPhone } from 'react-icons/fa';
+import { MdMail } from 'react-icons/md';
 
 import { team } from '@/utils/team';
 
 const Team = () => {
   return (
-    <div id="team" className="relative z-20 bg-[#002240] px-4 py-10 lg:px-16">
+    <div id="team" className="relative z-20 px-4 py-10 lg:px-16">
       <div className="rounded-md p-8">
-        <h1 className="mb-2 text-lg font-bold text-[#E0F0FF] lg:text-xl">
+        <h1 className="mb-2 text-lg font-bold text-black lg:text-xl">
           NOTRE EQUIPE
         </h1>
-        <div className="mt-12 grid grid-cols-3 gap-20 text-[#002240]">
+        <div className="mt-12 grid grid-cols-3 gap-20 text-black">
           {team.map((t, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center rounded-[24px] bg-white p-8"
+              className="flex flex-col items-center justify-center rounded-md border border-black/20 p-8 shadow-sm"
             >
               <img
                 src={t.icon}
                 alt={`${t.name}`}
-                className="h-20 w-20 rounded-full"
+                className="h-50 w-50 rounded-full"
               />
-              <div className="flex flex-col items-center gap-2">
-                <h2 className="font-semibold">{t.name}</h2>
-                <span className="rounded-[8px] bg-[#0C5ABF]/10 px-4 py-1 text-[8px] text-[#0C5ABF]">
+              <div className="mt-2 flex flex-col items-center gap-2">
+                <h2 className="text-[18px] font-semibold">{t.name}</h2>
+                <span className="rounded-[8px] bg-primary-700/10 px-8 py-1 text-[12px] text-primary-700">
                   {t.role}
                 </span>
               </div>
-              <p className="my-8 text-center text-[10px]">{t.description}</p>
-              <div className="flex flex-row items-center gap-4">
-                <Link href={t.linkedin}>
-                  <FaLinkedin />
-                </Link>
-                <Link href={t.twitter}>
-                  <FaSquareXTwitter />
-                </Link>
-                <Link href={t.gmail}>
-                  <MdEmail />
-                </Link>
+              <div className="mt-4 flex flex-col items-center gap-1 text-[16px]">
+                <div className="flex flex-row items-center gap-2">
+                  <FaPhone className="text-primary-700" />
+                  <p>{t.phone}</p>
+                </div>
+                <div className="flex flex-row items-center gap-2">
+                  <MdMail className="text-primary-700" />
+                  <p>{t.mail}</p>
+                </div>
               </div>
             </div>
           ))}

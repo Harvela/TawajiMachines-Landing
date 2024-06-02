@@ -35,13 +35,13 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
   return (
     <Flowbite theme={{ theme: customTheme }}>
       <Navbar
-        className="px-4 lg:px-16"
+        className="px-4 py-6 lg:px-16"
         style={{
           position: 'fixed',
           width: '100%',
           zIndex: 40,
           top: 0,
-          backgroundColor: 'rgba(0, 34, 64, 0.9)',
+          backgroundColor: 'rgba(0, 0, 0, 0.7)',
         }}
       >
         <Navbar.Brand href="#">
@@ -54,49 +54,54 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
         </Navbar.Brand>
         <Navbar.Collapse>
           <Link
-            activeClass="text-white font-bold border-b-2 border-white"
-            to="home"
+            activeClass="text-white font-bold border-b-2 border-primary-700"
+            to="/home"
             smooth
             spy
             offset={-200}
+            className="text-[16px] text-primary-700"
           >
-            Accueil
+            Home
           </Link>
           <Link
-            activeClass="text-white font-bold border-b-2 border-white"
-            to="projects"
+            activeClass="text-white font-bold border-b-2 border-primary-700"
+            to="/about"
             smooth
             spy
             offset={-100}
+            className="text-[16px] text-primary-700"
           >
-            Nos projets
+            About us
           </Link>
           <Link
-            activeClass="text-white font-bold border-b-2 border-white"
-            to="services"
+            activeClass="text-white font-bold border-b-2 border-primary-700"
+            to="/categories"
             smooth
             spy
+            className="text-[16px] text-primary-700"
           >
-            Nos services
+            Nos Categories
           </Link>
           <Link
-            activeClass="text-white font-bold border-b-2 border-white"
-            to="team"
+            activeClass="text-white font-bold border-b-2 border-primary-700"
+            to="/team"
             smooth
             spy
+            className="text-[16px] text-primary-700"
           >
             Notre equipe
           </Link>
-          <Link
-            activeClass="text-secondary-900 font-bold border-b-2 border-secondary-900"
-            to="pricing"
-            smooth
-            spy
-            offset={-100}
-          >
-            Contact
-          </Link>
         </Navbar.Collapse>
+        <Link
+          activeClass="text-secondary-900 font-bold border-b-2 border-white"
+          to="/contact"
+          smooth
+          spy
+          offset={-100}
+          className="rounded-lg bg-primary-700 px-6 py-1 text-white"
+        >
+          Contact
+        </Link>
       </Navbar>
     </Flowbite>
   );
