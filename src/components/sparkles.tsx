@@ -24,7 +24,7 @@ export const Icon = ({ className, ...rest }: any) => {
 export function CanvasRevealEffectDemo2() {
   return (
     <>
-      <div className="group/canvas-card relative mx-auto flex h-[14rem] w-[60%] items-center justify-center border border-black/[0.2] p-4 dark:border-white/[0.2]">
+      <div className="group/canvas-card relative mx-auto flex h-[14rem] w-[90%] items-center justify-center border border-black/[0.2] p-4 dark:border-white/[0.2] md:w-[60%]">
         <AnimatePresence>
           <div className="absolute inset-0 h-full w-full">
             <CanvasRevealEffect
@@ -42,7 +42,7 @@ export function CanvasRevealEffectDemo2() {
             <div className="mx-auto flex w-full items-center justify-center text-center  transition duration-200 group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0">
               <AceternityIcon />
             </div> */}
-        <h2 className="z-10 text-center text-[32px] font-bold text-white">
+        <h2 className="z-10 text-center text-[24px] font-bold text-white md:text-[32px]">
           Notre devise, notre devise, notre devise,
           <br /> notre devise
         </h2>

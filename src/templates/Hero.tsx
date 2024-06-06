@@ -7,11 +7,11 @@ const Hero: React.FC = () => {
   return (
     <div className="">
       <div id="home" className=" flex flex-row">
-        <div className="mx-16 mt-32 w-[50%]">
-          <h2 className="text-[16px] font-bold text-primary-500">
+        <div className="mx-8 mt-24 w-full text-center md:mx-16 md:mt-32 md:w-[50%] md:text-start">
+          <h2 className="text-[14px] font-bold text-primary-500 md:text-[16px]">
             TAWAJI CONSTRUCTION MACHINES
           </h2>
-          <h1 className="my-[30px] text-[50px] font-semibold text-white/80">
+          <h1 className="my-[30px] text-[28px] font-semibold text-white/80 md:text-[50px]">
             Your Perfect Collaborator on any Project.
           </h1>
           <div className="mt-[20px] flex flex-col gap-5 md:flex-row">
@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
             </Button>
           </div>
         </div>
-        <div className="w-[50%]">
+        <div className="hidden w-[50%]  md:block">
           <img
             src="/assets/images/home/truck.png"
             alt="Hero"
@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
           />
         </div>
       </div>
-      <div className=" mt-[-140px]">
+      <div className="mt-[140px] md:mt-[-140px]">
         <CanvasRevealEffectDemo2 />
       </div>
     </div>

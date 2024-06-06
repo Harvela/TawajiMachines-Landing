@@ -1,30 +1,35 @@
-import type { CustomFlowbiteTheme } from 'flowbite-react';
-import { Flowbite, Navbar } from 'flowbite-react';
-import React, { useEffect } from 'react';
-import { Link, scroller } from 'react-scroll';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
+import { FaRegWindowClose } from 'react-icons/fa';
+import { MdMenu } from 'react-icons/md';
+import { scroller } from 'react-scroll';
 
 export type NavbarProps = {
-  // Prop types go here
   setOpenModal?: (value: boolean) => void;
 };
 
-const customTheme: CustomFlowbiteTheme = {
-  navbar: {
-    link: {
-      base: 'block py-2 md:p-0 text-white',
-      active: {
-        on: 'text-white dark:text-white md:bg-transparent md:text-white',
-        off: 'border-b border-gray-100  text-white hover:bg-gray-50 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white',
-      },
-      disabled: {
-        on: 'text-white hover:cursor-not-allowed dark:text-white',
-        off: '',
-      },
-    },
-  },
-};
+const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState('home');
 
-const NavbarGlobal: React.FC<NavbarProps> = () => {
+  const handleMenuToggle = () => {
+    setIsOpen(!isOpen);
+    if (setOpenModal) {
+      setOpenModal(!isOpen);
+    }
+  };
+
+  const handleCloseMenu = () => {
+    setIsOpen(false);
+    if (setOpenModal) {
+      setOpenModal(false);
+    }
+  };
+
+  const handleSetActive = (section: string) => {
+    setActiveMenu(section);
+  };
+
   useEffect(() => {
     scroller.scrollTo('home', {
       duration: 800,
@@ -32,78 +37,188 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
       smooth: 'easeInOutQuart',
     });
   }, []);
+
   return (
-    <Flowbite theme={{ theme: customTheme }}>
-      <Navbar
-        className="px-4 py-6 lg:px-16"
-        style={{
-          position: 'fixed',
-          width: '100%',
-          zIndex: 40,
-          top: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.7)',
-        }}
-      >
-        <Navbar.Brand href="#">
+    <div
+      style={{
+        position: 'fixed',
+        width: '100%',
+        zIndex: 40,
+        top: 0,
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+      }}
+    >
+      <div className="hidden flex-row items-center justify-between px-4 py-6 md:flex lg:px-16">
+        <Link href="#">
           {/* <img
             src="/fullLogo.png"
             className="h-8 lg:mr-3 lg:h-16"
             alt="Docta Mobile Logo"
           /> */}
-          <h1 className="text-2xl font-bold text-white">Harvely</h1>
-        </Navbar.Brand>
-        <Navbar.Collapse>
+          <h1 className="text-2xl font-bold text-white">Tawaji</h1>
+        </Link>
+        <div className="flex flex-row gap-8">
           <Link
-            activeClass="text-white font-bold border-b-2 border-primary-700"
-            to="/home"
-            smooth
-            spy
-            offset={-200}
-            className="text-[16px] text-primary-700"
+            href="/#home"
+            className={`text-[16px] text-primary-700 ${
+              activeMenu === 'home'
+                ? 'border-b-2 border-primary-700'
+                : 'text-primary-700'
+            }`}
+            onClick={() => handleSetActive('home')}
           >
             Home
           </Link>
           <Link
-            activeClass="text-white font-bold border-b-2 border-primary-700"
-            to="/about"
-            smooth
-            spy
-            offset={-100}
-            className="text-[16px] text-primary-700"
+            href="/#about"
+            className={`text-[16px] text-primary-700 ${
+              activeMenu === 'about'
+                ? 'border-b-2 border-primary-700'
+                : 'text-primary-700'
+            }`}
+            onClick={() => handleSetActive('about')}
           >
             About us
           </Link>
           <Link
-            activeClass="text-white font-bold border-b-2 border-primary-700"
-            to="/categories"
-            smooth
-            spy
-            className="text-[16px] text-primary-700"
+            href="/#categories"
+            className={`text-[16px] text-primary-700 ${
+              activeMenu === 'categories'
+                ? 'border-b-2 border-primary-700'
+                : 'text-primary-700'
+            }`}
+            onClick={() => handleSetActive('categories')}
           >
             Nos Categories
           </Link>
           <Link
-            activeClass="text-white font-bold border-b-2 border-primary-700"
-            to="/team"
-            smooth
-            spy
-            className="text-[16px] text-primary-700"
+            href="/#team"
+            className={`text-[16px] text-primary-700 ${
+              activeMenu === 'team'
+                ? 'border-b-2 border-primary-700'
+                : 'text-primary-700'
+            }`}
+            onClick={() => handleSetActive('team')}
           >
             Notre equipe
           </Link>
-        </Navbar.Collapse>
+        </div>
         <Link
-          activeClass="text-secondary-900 font-bold border-b-2 border-white"
-          to="/contact"
-          smooth
-          spy
-          offset={-100}
-          className="rounded-lg bg-primary-700 px-6 py-1 text-white"
+          href="/#contact"
+          className={`rounded-lg bg-primary-700 px-4 py-1 text-white ${
+            activeMenu === 'contact'
+              ? 'border-2 border-primary-700 bg-black/40'
+              : ''
+          }`}
+          onClick={() => {
+            handleCloseMenu();
+            handleSetActive('contact');
+          }}
         >
           Contact
         </Link>
-      </Navbar>
-    </Flowbite>
+      </div>
+
+      <div className="flex flex-row gap-5 px-8 py-6 md:hidden">
+        <button onClick={handleMenuToggle}>
+          <MdMenu className="cursor-pointer text-white/90" size={30} />
+        </button>
+
+        <h1 className="text-[24px] text-white/90">Tawaji</h1>
+        {isOpen && (
+          <div className="absolute left-0 top-0 z-[1000] flex h-[100vh] w-[350px] flex-row justify-between bg-white p-8">
+            <div className="mt-12 flex flex-col gap-8">
+              <Link
+                href="/#home"
+                className={`text-lg font-medium text-primary-700 ${
+                  activeMenu === 'home'
+                    ? 'border-b-2 border-primary-700'
+                    : 'text-primary-700'
+                }`}
+                onClick={() => {
+                  handleCloseMenu();
+                  handleSetActive('home');
+                }}
+              >
+                Accueil
+              </Link>
+              <Link
+                href="/#about"
+                className={`text-lg font-medium text-primary-700 ${
+                  activeMenu === 'about'
+                    ? 'border-b-2 border-primary-700'
+                    : 'text-primary-700'
+                }`}
+                onClick={() => {
+                  handleCloseMenu();
+                  handleSetActive('about');
+                }}
+              >
+                About us
+              </Link>
+              <Link
+                href="/#categories"
+                className={`text-lg font-medium text-primary-700 ${
+                  activeMenu === 'categories'
+                    ? 'border-b-2 border-primary-700'
+                    : 'text-primary-700'
+                }`}
+                onClick={() => {
+                  handleCloseMenu();
+                  handleSetActive('categories');
+                }}
+              >
+                Nos categories
+              </Link>
+              <Link
+                href="/#galery"
+                className={`text-lg font-medium text-primary-700 ${
+                  activeMenu === 'galery'
+                    ? 'border-b-2 border-primary-700'
+                    : 'text-primary-700'
+                }`}
+                onClick={() => {
+                  handleCloseMenu();
+                  handleSetActive('galery');
+                }}
+              >
+                Gallerie
+              </Link>
+              <Link
+                href="/#team"
+                className={`text-lg font-medium text-primary-700 ${
+                  activeMenu === 'team'
+                    ? 'border-b-2 border-primary-700'
+                    : 'text-primary-700'
+                }`}
+                onClick={() => {
+                  handleCloseMenu();
+                  handleSetActive('team');
+                }}
+              >
+                Equipe
+              </Link>
+              <Link
+                href="/#contact"
+                className={`w-[70%] rounded-lg bg-primary-700 px-4 py-1 text-white ${
+                  activeMenu === 'contact' ? 'border-2 border-primary-700' : ''
+                }`}
+                onClick={() => {
+                  handleCloseMenu();
+                  handleSetActive('contact');
+                }}
+              >
+                Contact
+              </Link>
+            </div>
+            <FaRegWindowClose
+              onClick={handleCloseMenu}
+              className="h-6 w-6 text-primary-700"
+            />
+          </div>
+        )}
+      </div>
+    </div>
   );
 };
 

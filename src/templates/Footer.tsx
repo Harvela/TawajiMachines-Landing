@@ -93,10 +93,10 @@ const Footer = () => (
       </div>
 
       <div className="w-[100%] md:w-[40%]">
-        <h2 className="mb-4 text-[20px] font-semibold text-primary-700 ">
+        <h2 className="mb-4 text-[16px] font-semibold text-primary-700 md:text-[20px] ">
           TAWAJI CONSTRUCTION MACHINES
         </h2>
-        <p className="mb-8 text-[16px] text-white ">
+        <p className="mb-8 text-[12px] text-white md:text-[16px] ">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
           tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
         </p>
