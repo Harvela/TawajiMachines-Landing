@@ -3,7 +3,7 @@ import 'yet-another-react-lightbox/plugins/thumbnails.css';
 
 import axios from 'axios';
 import Link from 'next/link';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { MdOutlineNavigateNext } from 'react-icons/md';
 import PhotoAlbum from 'react-photo-album';
 import Lightbox from 'yet-another-react-lightbox';
@@ -13,11 +13,46 @@ import Slideshow from 'yet-another-react-lightbox/plugins/slideshow';
 import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 
-function PhotoPage({ photos }: any) {
+import { Booking } from '@/components/booking';
+import Dialog from '@/components/dialog';
+
+type TitleMap = {
+  [key: string]: string;
+};
+
+const titleMap: TitleMap = {
+  compacteuse: 'COMPACTEURS',
+  niveleuse: 'NIVELEUSES',
+  chargeuse: 'CHARGEUSES',
+  tractopelle: 'TRACTOPELLES',
+};
+
+interface PhotoPageProps {
+  photos: { src: string; width: number; height: number }[];
+  title: string;
+  error: string | null;
+}
+
+function PhotoPage({ photos, title }: PhotoPageProps) {
   const [index, setIndex] = useState(-1);
+  const [showForm, setShowForm] = useState(false);
+  const [message, setMessage] = useState('');
 
   return (
     <>
+      {showForm && (
+        <div className="fixed inset-0 z-50 bg-black/80">
+          <Dialog
+            onClose={() => {
+              setShowForm(false);
+            }}
+            isForm
+            width="md:w-[50%] sm:w-[95%] overflow-y-scroll max-h-[80%]"
+          >
+            <Booking message={message} onClose={() => setShowForm(false)} />
+          </Dialog>
+        </div>
+      )}
       <div className="relative h-[50vh]">
         <img
           src="/assets/images/home/background.jpg"
@@ -27,7 +62,7 @@ function PhotoPage({ photos }: any) {
         <div className="absolute left-0 top-0 flex h-[50vh] w-full flex-col items-center justify-center bg-[#000000]/80">
           <div>
             <h1 className="text-center text-[32px] font-semibold text-white md:text-[48px]">
-              COMPACTEURS
+              {title}
             </h1>
             <div className="m-auto flex flex-row items-center justify-center p-8 text-sm font-semibold text-white">
               <Link
@@ -41,7 +76,7 @@ function PhotoPage({ photos }: any) {
                 href="/#categories"
                 className="flex flex-row items-center justify-between text-[16px] text-primary-700 md:text-[20px]"
               >
-                COMPACTEUS
+                {title}
               </Link>
             </div>
           </div>
@@ -65,7 +100,13 @@ function PhotoPage({ photos }: any) {
             <p className="text-[20px] font-semibold text-primary-700">
               R595000,00 - R6000000,00
             </p>
-            <button className=" w-fit rounded-md bg-primary-700 px-10 py-2 text-sm text-black">
+            <button
+              onClick={() => {
+                setShowForm(true);
+                setMessage(``);
+              }}
+              className=" w-fit rounded-md bg-primary-700 px-10 py-2 text-sm text-black"
+            >
               Reserver
             </button>
           </div>
@@ -84,51 +125,11 @@ function PhotoPage({ photos }: any) {
   );
 }
 
-// export async function getStaticPaths() {
-//   return {
-//     paths: [
-//       '/gallery/compacteuse',
-//       '/gallery/niveleuse',
-//       '/gallery/chargeuse',
-//       '/gallery/tractopelle',
-//     ],
-//     fallback: true,
-//   };
-// }
-
-// export async function getStaticProps() {
-//   try {
-//     const res = await axios.get(`${process.env.APP_LINK}/api/photo`);
-
-//     const photos = res.data.photos.map((photo: any) => ({
-//       src: photo.url.replace('/upload/', '/upload/w_1080,f_auto/'),
-//       width: 1080,
-//       height: photo.height / (photo.width / 1080),
-//     }));
-
-//     return {
-//       props: {
-//         photos,
-//         error: null,
-//       },
-//     };
-//   } catch (error) {
-//     console.error('Error fetching photos:', error);
-//     return {
-//       props: {
-//         photos: [],
-//         error: 'Failed to fetch photos',
-//       },
-//     };
-//   }
-// }
-
 export async function getServerSideProps(ctx: any) {
   try {
+    const folder: string = ctx?.query?.id?.toLowerCase?.() || '';
     const res = await axios.get(
-      `${
-        process.env.APP_LINK
-      }/api/photo?folder=${ctx?.query?.id?.toLowerCase?.()}`,
+      `${process.env.APP_LINK}/api/photo?folder=${folder}`,
     );
 
     const photos = res.data.photos.map((photo: any) => ({
@@ -137,9 +138,12 @@ export async function getServerSideProps(ctx: any) {
       height: photo.height / (photo.width / 1080),
     }));
 
+    const title = titleMap[folder] || 'Service';
+
     return {
       props: {
         photos,
+        title,
         error: null,
       },
     };
@@ -148,6 +152,7 @@ export async function getServerSideProps(ctx: any) {
     return {
       props: {
         photos: [],
+        title: 'Service',
         error: 'Failed to fetch photos',
       },
     };

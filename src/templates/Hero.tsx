@@ -1,4 +1,4 @@
-import { Button } from 'flowbite-react';
+import Link from 'next/link';
 import React from 'react';
 
 const Hero: React.FC = () => {
@@ -13,12 +13,13 @@ const Hero: React.FC = () => {
             Your Perfect Collaborator on any Project.
           </h1>
           <div className="mt-[20px] flex flex-col gap-5 md:flex-row">
-            <Button
+            <Link
+              href="#categories"
               color="white"
-              className="animate-infinite h-[50px] animate-wiggle bg-primary-700 px-4 font-semibold text-black md:self-end"
+              className="animate-infinite animate-wiggle rounded-lg bg-primary-700 px-6 py-3 text-center font-semibold text-black md:self-end"
             >
               View catalog
-            </Button>
+            </Link>
           </div>
         </div>
         <div className="hidden w-[50%]  md:block">
