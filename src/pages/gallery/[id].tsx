@@ -84,52 +84,21 @@ function PhotoPage({ photos }: any) {
   );
 }
 
-export async function getStaticPaths() {
-  return {
-    paths: [
-      '/gallery/compacteuse',
-      '/gallery/niveleuse',
-      '/gallery/chargeuse',
-      '/gallery/tractopelle',
-    ],
-    fallback: true,
-  };
-}
+// export async function getStaticPaths() {
+//   return {
+//     paths: [
+//       '/gallery/compacteuse',
+//       '/gallery/niveleuse',
+//       '/gallery/chargeuse',
+//       '/gallery/tractopelle',
+//     ],
+//     fallback: true,
+//   };
+// }
 
-export async function getStaticProps() {
-  try {
-    const res = await axios.get(`${process.env.APP_LINK}/api/photo`);
-
-    const photos = res.data.photos.map((photo: any) => ({
-      src: photo.url.replace('/upload/', '/upload/w_1080,f_auto/'),
-      width: 1080,
-      height: photo.height / (photo.width / 1080),
-    }));
-
-    return {
-      props: {
-        photos,
-        error: null,
-      },
-    };
-  } catch (error) {
-    console.error('Error fetching photos:', error);
-    return {
-      props: {
-        photos: [],
-        error: 'Failed to fetch photos',
-      },
-    };
-  }
-}
-
-// export async function getServerSideProps(ctx: any) {
+// export async function getStaticProps() {
 //   try {
-//     const res = await axios.get(
-//       `${
-//         process.env.APP_LINK
-//       }/api/photo?folder=${ctx?.query?.id?.toLowerCase?.()}`,
-//     );
+//     const res = await axios.get(`${process.env.APP_LINK}/api/photo`);
 
 //     const photos = res.data.photos.map((photo: any) => ({
 //       src: photo.url.replace('/upload/', '/upload/w_1080,f_auto/'),
@@ -153,5 +122,36 @@ export async function getStaticProps() {
 //     };
 //   }
 // }
+
+export async function getServerSideProps(ctx: any) {
+  try {
+    const res = await axios.get(
+      `${
+        process.env.APP_LINK
+      }/api/photo?folder=${ctx?.query?.id?.toLowerCase?.()}`,
+    );
+
+    const photos = res.data.photos.map((photo: any) => ({
+      src: photo.url.replace('/upload/', '/upload/w_1080,f_auto/'),
+      width: 1080,
+      height: photo.height / (photo.width / 1080),
+    }));
+
+    return {
+      props: {
+        photos,
+        error: null,
+      },
+    };
+  } catch (error) {
+    console.error('Error fetching photos:', error);
+    return {
+      props: {
+        photos: [],
+        error: 'Failed to fetch photos',
+      },
+    };
+  }
+}
 
 export default PhotoPage;
