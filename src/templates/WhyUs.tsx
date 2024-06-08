@@ -8,7 +8,7 @@ const WhyUs = () => {
     >
       <div className="relative h-[40vh] w-[95%] gap-8 rounded-lg bg-primary-700 md:h-[80vh] md:w-[40%]">
         <img
-          src="/assets/images/home/why.jpg"
+          src="https://res.cloudinary.com/dzj9hndxv/image/upload/v1717816447/20240527_112731_page-0001_1_liecgs.jpg"
           alt="Logo"
           className="z-40 ml-[15px] mt-[-15px] h-full w-full rounded-lg object-cover md:ml-[30px] md:mt-[-30px]"
         />

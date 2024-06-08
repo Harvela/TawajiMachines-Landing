@@ -5,11 +5,11 @@ import { team } from '@/utils/team';
 
 const Team = () => {
   return (
-    <div id="team" className="mt-32 px-4 py-10 md:z-20 md:px-16">
-      <div className="rounded-md p-2 md:p-8">
-        <h1 className="mb-2 text-lg font-bold text-black md:text-xl">
-          NOTRE EQUIPE
-        </h1>
+    <div id="team" className="mt-10 px-4 py-10 md:z-20 md:px-16">
+      <h1 className="mb-2 text-lg font-bold text-black md:text-xl">
+        NOTRE EQUIPE
+      </h1>
+      <div className="rounded-md py-2 md:py-8">
         <div className="mt-12 grid grid-cols-2 gap-4 text-black md:grid-cols-3 md:gap-20">
           {team.map((t, index) => (
             <div
