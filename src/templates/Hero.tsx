@@ -1,13 +1,11 @@
 import { Button } from 'flowbite-react';
 import React from 'react';
 
-import { CanvasRevealEffectDemo2 } from '@/components/sparkles';
-
 const Hero: React.FC = () => {
   return (
     <div className="">
       <div id="home" className=" flex flex-row">
-        <div className="mx-8 mt-24 w-full text-center md:mx-16 md:mt-32 md:w-[50%] md:text-start">
+        <div className="mx-8 mt-[0px] flex h-[80vh]  w-full flex-col justify-center text-center md:mx-16 md:mt-[-40px]  md:h-auto md:w-[50%] md:text-start">
           <h2 className="text-[14px] font-bold text-primary-500 md:text-[16px]">
             TAWAJI CONSTRUCTION MACHINES
           </h2>
@@ -31,9 +29,9 @@ const Hero: React.FC = () => {
           />
         </div>
       </div>
-      <div className="mt-[140px] md:mt-[-140px]">
+      {/* <div className="mt-[140px] md:mt-[-140px]">
         <CanvasRevealEffectDemo2 />
-      </div>
+      </div> */}
     </div>
   );
 };
