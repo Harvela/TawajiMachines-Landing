@@ -15,6 +15,7 @@ import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 
 import { Booking } from '@/components/booking';
 import Dialog from '@/components/dialog';
+import { services } from '@/utils/services';
 
 type TitleMap = {
   [key: string]: string;
@@ -31,9 +32,10 @@ interface PhotoPageProps {
   photos: { src: string; width: number; height: number }[];
   title: string;
   error: string | null;
+  description: string;
 }
 
-function PhotoPage({ photos, title }: PhotoPageProps) {
+function PhotoPage({ photos, title, description }: PhotoPageProps) {
   const [index, setIndex] = useState(-1);
   const [showForm, setShowForm] = useState(false);
   const [message, setMessage] = useState('');
@@ -93,8 +95,7 @@ function PhotoPage({ photos, title }: PhotoPageProps) {
         </div>
         <div className="col-span-2   mb-16 gap-4 md:flex-row">
           <p className="text-[16px] font-semibold text-black md:text-[20px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget
-            tellus nisi.
+            {description}
           </p>
           <div className="mt-8 flex w-full  flex-col gap-10">
             <p className="text-[20px] font-semibold text-primary-700">
@@ -145,6 +146,8 @@ export async function getServerSideProps(ctx: any) {
         photos,
         title,
         error: null,
+        description: services.find((service) => service.link === folder)
+          ?.description,
       },
     };
   } catch (error) {
@@ -154,6 +157,7 @@ export async function getServerSideProps(ctx: any) {
         photos: [],
         title: 'Service',
         error: 'Failed to fetch photos',
+        description: '',
       },
     };
   }

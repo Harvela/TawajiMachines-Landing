@@ -35,7 +35,7 @@ const Services = () => {
                   </p>
                   <Link href={`/gallery/${service.link}`}>
                     <button className="w-[60%] rounded-sm bg-black p-1 text-[11px] text-white md:w-[40%] md:text-sm">
-                      View more
+                      Voir les details
                     </button>
                   </Link>
                 </div>

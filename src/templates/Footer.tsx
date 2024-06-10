@@ -1,7 +1,7 @@
 const links = {
   grid1: [
     { title: 'Accueil', link: 'home' },
-    { title: 'About us', link: 'about' },
+    { title: 'A Propos de nous', link: 'about' },
     { title: 'Nos categories', link: 'categories' },
     { title: 'Notre equipe', link: 'team' },
     { title: 'Contact', link: 'contact' },
@@ -97,8 +97,7 @@ const Footer = () => (
           TAWAJI CONSTRUCTION MACHINES
         </h2>
         <p className="mb-8 text-[12px] text-white md:text-[16px] ">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-          tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          Le collaborateur idéal pour vos projets de construction
         </p>
         <div className="flex flex-row items-center gap-8">
           <img

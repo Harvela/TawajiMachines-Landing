@@ -14,19 +14,20 @@ const WhyUs = () => {
         />
         <div className="absolute bottom-0 left-0 ml-[15px] rounded-tr-lg bg-primary-700 px-4 py-2 text-center font-semibold text-black md:ml-[30px] md:px-8 md:py-4">
           <h2 className="text-[24px] md:text-[48px]">25+</h2>
-          <p className="text-[12px] md:text-[16px]">Years of experience</p>
+          <p className="text-[12px] md:text-[16px]">Années d&apos;experience</p>
         </div>
       </div>
       <div className="mt-[30px] w-full text-center md:mt-[-30px] md:w-[50%] md:text-start">
         <p className="text-[14px] font-semibold text-primary-700 md:text-[20px]">
-          WELCOME TO TAWAJI CONSTRUCTION MACHINES
+          BIENVENUE CHEZ TAWAJI CONSTRUCTION MACHINES
         </p>
         <h2 className="my-[20px] text-[16px] font-bold md:text-[24px]">
-          The moving force in construction plant and equipment transportation
+          Le collaborateur idéal pour vos projets de construction
         </h2>
         <p className="text-[12px] md:text-[16px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-          tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          Nous sommes spécialisés dans la location et le transport de machinerie
+          lourde, garantissant une performance optimale et une fiabilité
+          inégalée.
         </p>
 
         <div className="mt-8 flex flex-col gap-8 text-start">
@@ -36,11 +37,11 @@ const WhyUs = () => {
             </div>
             <div className="flex flex-col gap-3">
               <h2 className="text-[14px] font-semibold md:text-[24px]">
-                Extensive Equipment Catalog
+                Un catalogue varié
               </h2>
               <p className="text-[10px] md:text-[16px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                Nous mettons à votre disposition une large gamme de machines de
+                construction pour répondre à tous vos besoins.
               </p>
             </div>
           </div>
@@ -51,11 +52,13 @@ const WhyUs = () => {
             </div>
             <div className="flex flex-col gap-3">
               <h2 className="text-[14px] font-semibold md:text-[24px]">
-                Flexible Rental Options
+                Des services de location de qualité
               </h2>
               <p className="text-[10px] md:text-[16px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                Nos machines sont régulièrement entretenues et vérifiées pour
+                garantir leur bon fonctionnement et votre sécurité. Une équipe
+                de professionnels est également à votre disposition pour vous
+                conseiller et vous accompagner dans le choix de vos machines.
               </p>
             </div>
           </div>

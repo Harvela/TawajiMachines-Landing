@@ -5,7 +5,7 @@ export const services = [
     link: 'compacteuse',
     icon: '/assets/images/home/why.jpg',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget tellus nisi. ',
+      'Idéal pour le compactage de sols et d’asphalte, ce rouleau compresseur assure une surface lisse et stable.',
     image:
       'https://res.cloudinary.com/dzj9hndxv/image/upload/w_500,f_auto/v1717816579/20240527_111949_page-0001_1_e5iww6.jpg',
   },
@@ -15,7 +15,7 @@ export const services = [
     link: 'tractopelle',
     icon: '/assets/images/home/why.jpg',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget tellus nisi. ',
+      'Polyvalent et puissant, cet engin est parfait pour les travaux d’excavation et de chargement.',
     image:
       'https://res.cloudinary.com/dzj9hndxv/image/upload/w_500,f_auto/v1717816670/20240523_123242_page-0001_1_tzfwnm.jpg',
   },
@@ -25,7 +25,7 @@ export const services = [
     link: 'niveleuse',
     icon: '/assets/images/home/why.jpg',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget tellus nisi. ',
+      'Utilisée pour niveler et préparer les surfaces, cette niveleuse garantit une finition parfaite.',
     image:
       'https://res.cloudinary.com/dzj9hndxv/image/upload/w_500,f_auto/v1717816451/20240523_123126_page-0001_1_orj8cc.jpg',
   },
@@ -35,7 +35,7 @@ export const services = [
     link: 'chargeuse',
     icon: '/assets/images/home/why.jpg',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget tellus nisi. ',
+      'Conçue pour déplacer de grandes quantités de matériaux, cette chargeuse est essentielle sur les chantiers.',
     image:
       'https://res.cloudinary.com/dzj9hndxv/image/upload/w_500,f_auto/v1717816366/20240523_123457_page-0001_1_tnsbya.jpg',
   },

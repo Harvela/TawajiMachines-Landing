@@ -67,7 +67,7 @@ const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
             }`}
             onClick={() => handleSetActive('home')}
           >
-            Home
+            Acceuil
           </Link>
           <Link
             href="/#about"
@@ -78,7 +78,7 @@ const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
             }`}
             onClick={() => handleSetActive('about')}
           >
-            About us
+            A Propos de nous
           </Link>
           <Link
             href="/#categories"
@@ -154,7 +154,7 @@ const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
                   handleSetActive('about');
                 }}
               >
-                About us
+                A Propos de nous
               </Link>
               <Link
                 href="/#categories"

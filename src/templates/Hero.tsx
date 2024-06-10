@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
             TAWAJI CONSTRUCTION MACHINES
           </h2>
           <h1 className="my-[30px] text-[28px] font-semibold text-white/80 md:text-[50px]">
-            Your Perfect Collaborator on any Project.
+            Le collaborateur idéal pour vos projets de construction
           </h1>
           <div className="mt-[20px] flex flex-col gap-5 md:flex-row">
             <Link
@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
               color="white"
               className="animate-infinite animate-wiggle rounded-lg bg-primary-700 px-6 py-3 text-center font-semibold text-black md:self-end"
             >
-              View catalog
+              Voir notre catalogue
             </Link>
           </div>
         </div>

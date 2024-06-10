@@ -62,7 +62,7 @@ export function Contact() {
             <FaPhoneVolume className="text-lg md:text-2xl" />
           </div>
           <div className="flex flex-col gap-2 font-semibold">
-            <h2 className="text-[16px] md:text-[20px]">Call now</h2>
+            <h2 className="text-[16px] md:text-[20px]">Appelez nous</h2>
             <p className="text-[20px] md:text-[24px]">+243 991746590</p>
           </div>
         </div>
@@ -72,8 +72,8 @@ export function Contact() {
             <FaClock className="text-lg md:text-2xl" />
           </div>
           <div className="flex flex-col gap-2 font-semibold">
-            <h2 className="text-[16px] md:text-[20px]">Monday - Sunday</h2>
-            <p className="text-[20px] md:text-[24px]">09.00 AM - 08.00 PM</p>
+            <h2 className="text-[16px] md:text-[20px]">Du Lundi - Dimanche</h2>
+            <p className="text-[20px] md:text-[24px]">09.00 - 20: 00</p>
           </div>
         </div>
 
@@ -82,7 +82,7 @@ export function Contact() {
             <FaMapMarkerAlt className="text-lg md:text-2xl" />
           </div>
           <div className="flex flex-col gap-2 font-semibold">
-            <h2 className="text-[16px] md:text-[20px]">Location</h2>
+            <h2 className="text-[16px] md:text-[20px]">Addresse</h2>
             <p className="text-[20px] md:text-[24px]">Goma, Q. les volcans</p>
           </div>
         </div>

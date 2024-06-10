@@ -2,7 +2,7 @@ export const team = [
   {
     name: 'Team member',
     role: 'Directeur',
-    icon: '/assets/images/home/team.png',
+    icon: '/assets/images/home/why.jpg',
     phone: '+256 890987654',
     mail: 'directeur@gmail.com',
     description:
@@ -11,7 +11,7 @@ export const team = [
   {
     name: 'Team member',
     role: 'Manager',
-    icon: '/assets/images/home/team.png',
+    icon: '/assets/images/home/why.jpg',
     phone: '+256 890987654',
     mail: 'directeur@gmail.com',
     description:
@@ -20,7 +20,7 @@ export const team = [
   {
     name: 'Team member',
     role: 'Secretaire',
-    icon: '/assets/images/home/team.png',
+    icon: '/assets/images/home/why.jpg',
     phone: '+256 890987654',
     mail: 'directeur@gmail.com',
     description:
