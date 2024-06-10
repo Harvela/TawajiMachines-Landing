@@ -31,14 +31,14 @@ const titleMap: TitleMap = {
 interface PhotoPageProps {
   photos: { src: string; width: number; height: number }[];
   title: string;
-  error: string | null;
   description: string;
+  error: string | null;
+  title1: string;
 }
 
-function PhotoPage({ photos, title, description }: PhotoPageProps) {
+function PhotoPage({ photos, title, title1, description }: PhotoPageProps) {
   const [index, setIndex] = useState(-1);
   const [showForm, setShowForm] = useState(false);
-  const [message, setMessage] = useState('');
 
   return (
     <>
@@ -51,7 +51,7 @@ function PhotoPage({ photos, title, description }: PhotoPageProps) {
             isForm
             width="md:w-[50%] sm:w-[95%] overflow-y-scroll max-h-[80%]"
           >
-            <Booking message={message} onClose={() => setShowForm(false)} />
+            <Booking onClose={() => setShowForm(false)} />
           </Dialog>
         </div>
       )}
@@ -76,7 +76,7 @@ function PhotoPage({ photos, title, description }: PhotoPageProps) {
               </Link>
               <Link
                 href="/#categories"
-                className="flex flex-row items-center justify-between text-[16px] text-primary-300 md:text-[20px]"
+                className="flex flex-row items-center justify-between text-[16px] text-[#71AEFD] md:text-[20px]"
               >
                 {title}
               </Link>
@@ -85,7 +85,7 @@ function PhotoPage({ photos, title, description }: PhotoPageProps) {
         </div>
       </div>
       <div className="mt-[20px] flex flex-col-reverse gap-5 p-4 py-8 md:grid md:grid-cols-5 md:gap-14 md:px-16 ">
-        <div className=" col-span-3">
+        <div className="col-span-3">
           <PhotoAlbum
             photos={photos}
             layout="rows"
@@ -93,24 +93,21 @@ function PhotoPage({ photos, title, description }: PhotoPageProps) {
             onClick={({ index: indexs }) => setIndex(indexs)}
           />
         </div>
-        <div className="col-span-2   mb-16 gap-4 md:flex-row">
-          <p className="text-[16px] font-semibold text-black md:text-[20px]">
+        <div className="col-span-2 mb-16 gap-4 md:flex-row">
+          <p className="mb-4 text-[16px] font-semibold text-black md:text-[32px]">
+            {title1}
+          </p>
+          <p className="text-[14px] text-gray-700 md:text-[18px]">
             {description}
           </p>
-          <div className="mt-8 flex w-full  flex-col gap-10">
-            <p className="text-[20px] font-semibold text-primary-700">
-              R595000,00 - R6000000,00
-            </p>
-            <button
-              onClick={() => {
-                setShowForm(true);
-                setMessage(``);
-              }}
-              className=" w-fit rounded-md bg-primary-700 px-10 py-2 text-sm text-white"
-            >
-              Reserver
-            </button>
-          </div>
+          {/* <button
+            onClick={() => {
+              setShowForm(true);
+            }}
+            className="mt-4 w-fit rounded-md bg-primary-700 px-10 py-2 text-sm text-white"
+          >
+            Reserver
+          </button> */}
         </div>
       </div>
 
@@ -140,14 +137,15 @@ export async function getServerSideProps(ctx: any) {
     }));
 
     const title = titleMap[folder] || 'Service';
+    const service = services.find((s) => s.link === folder);
 
     return {
       props: {
         photos,
         title,
         error: null,
-        description: services.find((service) => service.link === folder)
-          ?.description,
+        description: service?.description || '',
+        title1: service?.title1 || '',
       },
     };
   } catch (error) {
@@ -158,6 +156,7 @@ export async function getServerSideProps(ctx: any) {
         title: 'Service',
         error: 'Failed to fetch photos',
         description: '',
+        title1: '',
       },
     };
   }

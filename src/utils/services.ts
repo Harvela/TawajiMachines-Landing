@@ -1,7 +1,7 @@
 export const services = [
   {
     name: 'COMPACTEUR',
-    type: '3 tons, 2 wheels Road Roller',
+    title1: '3 tons, 2 wheels Road Roller',
     link: 'compacteuse',
     icon: '/assets/images/home/why.jpg',
     description:
@@ -11,7 +11,7 @@ export const services = [
   },
   {
     name: 'TRACTOPELLE',
-    type: 'WZ40-28 Backhoe loader',
+    title1: 'WZ40-28 Backhoe loader',
     link: 'tractopelle',
     icon: '/assets/images/home/why.jpg',
     description:
@@ -21,7 +21,7 @@ export const services = [
   },
   {
     name: 'NIVELEUSE',
-    type: 'XCMG GR215 GRADER',
+    title1: 'XCMG GR215 GRADER',
     link: 'niveleuse',
     icon: '/assets/images/home/why.jpg',
     description:
@@ -31,7 +31,7 @@ export const services = [
   },
   {
     name: 'CHARGEUSE',
-    type: 'XCMG ZL50GN LOADER',
+    title1: 'XCMG ZL50GN LOADER',
     link: 'chargeuse',
     icon: '/assets/images/home/why.jpg',
     description:
