@@ -6,7 +6,7 @@ import { team } from '@/utils/team';
 const Team = () => {
   return (
     <div id="team" className="mt-10 px-4 py-10 md:z-20 md:px-16">
-      <h1 className="mb-2 text-lg font-bold text-black md:text-xl">
+      <h1 className="mb-2 text-lg font-bold text-primary-700 md:text-xl">
         NOTRE EQUIPE
       </h1>
       <div className="rounded-md py-2 md:py-8">
@@ -14,7 +14,7 @@ const Team = () => {
           {team.map((t, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center rounded-md border border-black/20 p-2 shadow-sm md:p-8"
+              className="flex flex-col items-center justify-center rounded-md border border-primary-700/20 p-2 shadow-sm md:p-8"
             >
               <img
                 src={t.icon}

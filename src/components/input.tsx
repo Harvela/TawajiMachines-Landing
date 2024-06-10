@@ -39,14 +39,14 @@ const Input: React.FC<Props> = (props: Props) => {
   return (
     <div className={`sm:mb-5 ${style} flex-1`}>
       {label && (
-        <span className="text-blue mb-2 flex flex-row items-center gap-1 text-[12px] font-semibold">
+        <span className="mb-2 flex flex-row items-center gap-1 text-[12px] font-semibold text-primary-700">
           {label}
           {icon}
         </span>
       )}
       <input
         type={type || 'text'}
-        className={`${bgColor} border-blue/10 w-full rounded-[5px] px-4 py-1 text-[14px] focus:outline-0`}
+        className={`${bgColor} w-full rounded-[5px] border-primary-700/20 px-4 py-1 text-[14px] focus:outline-0`}
         placeholder={placeholder}
         max={max}
         min={min}

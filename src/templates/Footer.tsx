@@ -19,7 +19,7 @@ const links = {
 };
 
 const Footer = () => (
-  <footer className="bg-black p-4 py-8 md:p-16">
+  <footer className="bg-primary-700 p-4 py-8 md:p-16">
     <div className="text-text flex flex-col-reverse justify-between dark:bg-gray-800 md:flex-row ">
       <div className="mb-6 md:mb-0">
         <p className="mt-8 font-bold text-white md:mt-0">
@@ -30,7 +30,7 @@ const Footer = () => (
         <div className="mt-8 flex flex-row items-center gap-8">
           <a
             href="#"
-            className="text-primary-700  hover:text-gray-900 dark:hover:text-white"
+            className="text-white  hover:text-gray-900 dark:hover:text-white"
           >
             <svg
               className="size-5"
@@ -47,7 +47,7 @@ const Footer = () => (
           </a>
           <a
             href="#"
-            className="text-primary-700  hover:text-gray-900 dark:hover:text-white"
+            className="text-white  hover:text-gray-900 dark:hover:text-white"
           >
             <svg
               className="size-5"
@@ -64,7 +64,7 @@ const Footer = () => (
           </a>
           <a
             href="#"
-            className="text-primary-700  hover:text-gray-900 dark:hover:text-white"
+            className="text-white  hover:text-gray-900 dark:hover:text-white"
           >
             <svg
               className="size-5"
@@ -78,7 +78,7 @@ const Footer = () => (
         </div>
       </div>
       <div>
-        <h2 className="text-md mb-6 mt-12 font-bold uppercase text-primary-700 md:mt-0 ">
+        <h2 className="text-md mb-6 mt-12 font-bold uppercase text-white md:mt-0 ">
           Liens utiles
         </h2>
         <ul className="text-white dark:text-gray-400">
@@ -93,7 +93,7 @@ const Footer = () => (
       </div>
 
       <div className="w-[100%] md:w-[40%]">
-        <h2 className="mb-4 text-[16px] font-semibold text-primary-700 md:text-[20px] ">
+        <h2 className="mb-4 text-[16px] font-semibold text-white md:text-[20px] ">
           TAWAJI CONSTRUCTION MACHINES
         </h2>
         <p className="mb-8 text-[12px] text-white md:text-[16px] ">

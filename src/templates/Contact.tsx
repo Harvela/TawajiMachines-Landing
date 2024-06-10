@@ -55,10 +55,12 @@ export function Contact() {
   };
   return (
     <div id="contact" className="flex w-full flex-col px-4 md:px-16 md:py-4">
-      <h1 className="text-blue mb-8 text-lg font-bold lg:text-xl">CONTACT</h1>
+      <h1 className="text-blue mb-8 text-lg font-bold text-primary-700 lg:text-xl">
+        CONTACT
+      </h1>
       <div className="my-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
-        <div className="flex flex-row items-center gap-6 rounded-md bg-black px-8 py-4 text-white md:py-10">
-          <div className="flex w-[12%] flex-row items-center justify-center rounded-full bg-primary-700 p-2 text-black md:h-full md:w-[18%] md:p-4">
+        <div className="flex flex-row items-center gap-6 rounded-md bg-primary-700 px-8 py-4 text-white md:py-10">
+          <div className="flex w-[12%] flex-row items-center justify-center rounded-full bg-white p-2 text-primary-700 md:h-full md:w-[18%] md:p-4">
             <FaPhoneVolume className="text-lg md:text-2xl" />
           </div>
           <div className="flex flex-col gap-2 font-semibold">
@@ -67,18 +69,18 @@ export function Contact() {
           </div>
         </div>
 
-        <div className="flex flex-row items-center gap-6 rounded-md bg-primary-700 px-8 py-4 text-black md:py-10">
-          <div className="flex w-[12%] flex-row items-center justify-center rounded-full bg-black p-2 text-white md:h-full md:w-[18%] md:p-4">
+        <div className="flex flex-row items-center gap-6 rounded-md border-2 border-primary-700 px-8 py-4 text-black md:py-10">
+          <div className="flex w-[12%] flex-row items-center justify-center rounded-full bg-primary-700 p-2 text-white md:h-full md:w-[18%] md:p-4">
             <FaClock className="text-lg md:text-2xl" />
           </div>
-          <div className="flex flex-col gap-2 font-semibold">
+          <div className="flex flex-col gap-2 font-semibold text-primary-700">
             <h2 className="text-[16px] md:text-[20px]">Du Lundi - Dimanche</h2>
             <p className="text-[20px] md:text-[24px]">09.00 - 20: 00</p>
           </div>
         </div>
 
-        <div className="flex flex-row items-center gap-6 rounded-md bg-black px-8 py-4 text-white md:py-10">
-          <div className="flex w-[12%] flex-row items-center justify-center rounded-full bg-primary-700 p-2 text-black md:h-full md:w-[18%] md:p-4">
+        <div className="flex flex-row items-center gap-6 rounded-md bg-primary-700 px-8 py-4 text-white md:py-10">
+          <div className="flex w-[12%] flex-row items-center justify-center rounded-full bg-white p-2 text-primary-700 md:h-full md:w-[18%] md:p-4">
             <FaMapMarkerAlt className="text-lg md:text-2xl" />
           </div>
           <div className="flex flex-col gap-2 font-semibold">
@@ -136,12 +138,12 @@ export function Contact() {
           </div>
           <textarea
             placeholder="Message"
-            className="mb-4 h-[200px] w-full rounded-md border border-black/20"
+            className="mb-4 h-[200px] w-full rounded-md border border-primary-700/20"
             onChange={(e: any) => setMessage(e.target.value)}
             value={message}
           />
           <button
-            className="h-[50px] w-[60%] rounded-md bg-black px-4 py-2 font-semibold text-white md:w-[30%]"
+            className="h-[50px] w-[60%] rounded-md bg-primary-700 px-4 py-2 font-semibold text-white md:w-[30%]"
             onClick={() => {
               if (isLoading) return;
               setShowRecaptcha(true);

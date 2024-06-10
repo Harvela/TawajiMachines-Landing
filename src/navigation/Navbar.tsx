@@ -45,25 +45,23 @@ const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
         width: '100%',
         zIndex: 40,
         top: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+        backgroundColor: 'rgba(0, 0, 0, 0.6)',
       }}
     >
       <div className="hidden flex-row items-center justify-between px-4 py-6 md:flex lg:px-16">
-        <Link href="#">
-          {/* <img
-            src="/fullLogo.png"
-            className="h-8 lg:mr-3 lg:h-16"
-            alt="Docta Mobile Logo"
-          /> */}
-          <h1 className="text-2xl font-bold text-white">Tawaji</h1>
+        <Link href="#" className="flex flex-row items-center">
+          <img
+            src="/assets/images/home/logo.png"
+            className="h-8 rounded-lg bg-white"
+            alt="Logo"
+          />
+          <h1 className="pl-5 text-2xl font-bold text-white">TAWAJI</h1>
         </Link>
         <div className="flex flex-row gap-8">
           <Link
             href="/#home"
-            className={`text-[16px] text-primary-700 ${
-              activeMenu === 'home'
-                ? 'border-b-2 border-primary-700'
-                : 'text-primary-700'
+            className={`text-[16px] text-white ${
+              activeMenu === 'home' ? 'border-b-2 border-white' : 'text-white'
             }`}
             onClick={() => handleSetActive('home')}
           >
@@ -71,10 +69,8 @@ const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
           </Link>
           <Link
             href="/#about"
-            className={`text-[16px] text-primary-700 ${
-              activeMenu === 'about'
-                ? 'border-b-2 border-primary-700'
-                : 'text-primary-700'
+            className={`text-[16px] text-white ${
+              activeMenu === 'about' ? 'border-b-2 border-white' : 'text-white'
             }`}
             onClick={() => handleSetActive('about')}
           >
@@ -82,10 +78,10 @@ const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
           </Link>
           <Link
             href="/#categories"
-            className={`text-[16px] text-primary-700 ${
+            className={`text-[16px] text-white ${
               activeMenu === 'categories'
-                ? 'border-b-2 border-primary-700'
-                : 'text-primary-700'
+                ? 'border-b-2 border-white'
+                : 'text-white'
             }`}
             onClick={() => handleSetActive('categories')}
           >
@@ -93,10 +89,8 @@ const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
           </Link>
           <Link
             href="/#team"
-            className={`text-[16px] text-primary-700 ${
-              activeMenu === 'team'
-                ? 'border-b-2 border-primary-700'
-                : 'text-primary-700'
+            className={`text-[16px] text-white ${
+              activeMenu === 'team' ? 'border-b-2 border-white' : 'text-white'
             }`}
             onClick={() => handleSetActive('team')}
           >

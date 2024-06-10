@@ -19,7 +19,7 @@ const Base = () => {
           alt="Hero"
           className="h-[100vh] w-full object-cover"
         />
-        <div className="absolute left-0 top-0 mt-[80px] h-[90vh] w-full bg-[#000000]/70">
+        <div className="absolute left-0 top-0 mt-[80px] h-[90vh] w-full bg-[#000000]/60">
           <Navbar />
           <Hero />
         </div>

@@ -35,7 +35,7 @@ export const services = [
     link: 'chargeuse',
     icon: '/assets/images/home/why.jpg',
     description:
-      'Conçue pour déplacer de grandes quantités de matériaux, cette chargeuse est essentielle sur les chantiers.',
+      'Conçue pour déplacer de grandes quantités de matériaux, cette chargeuse est essentielle.',
     image:
       'https://res.cloudinary.com/dzj9hndxv/image/upload/w_500,f_auto/v1717816366/20240523_123457_page-0001_1_tnsbya.jpg',
   },

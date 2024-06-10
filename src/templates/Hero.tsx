@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
     <div className="">
       <div id="home" className=" flex flex-row">
         <div className="mx-8 mt-[0px] flex h-[80vh]  w-full flex-col justify-center text-center md:mx-16 md:mt-[-40px]  md:h-auto md:w-[50%] md:text-start">
-          <h2 className="text-[14px] font-bold text-primary-500 md:text-[16px]">
+          <h2 className="text-[14px] font-bold text-white/90 md:text-[16px]">
             TAWAJI CONSTRUCTION MACHINES
           </h2>
           <h1 className="my-[30px] text-[28px] font-semibold text-white/80 md:text-[50px]">
@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
             <Link
               href="#categories"
               color="white"
-              className="animate-infinite animate-wiggle rounded-lg bg-primary-700 px-6 py-3 text-center font-semibold text-black md:self-end"
+              className="animate-infinite animate-wiggle rounded-lg bg-primary-700 px-6 py-3 text-center font-semibold text-white md:self-end"
             >
               Voir notre catalogue
             </Link>

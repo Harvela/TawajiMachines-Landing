@@ -76,7 +76,7 @@ function PhotoPage({ photos, title, description }: PhotoPageProps) {
               </Link>
               <Link
                 href="/#categories"
-                className="flex flex-row items-center justify-between text-[16px] text-primary-700 md:text-[20px]"
+                className="flex flex-row items-center justify-between text-[16px] text-primary-300 md:text-[20px]"
               >
                 {title}
               </Link>
@@ -106,7 +106,7 @@ function PhotoPage({ photos, title, description }: PhotoPageProps) {
                 setShowForm(true);
                 setMessage(``);
               }}
-              className=" w-fit rounded-md bg-primary-700 px-10 py-2 text-sm text-black"
+              className=" w-fit rounded-md bg-primary-700 px-10 py-2 text-sm text-white"
             >
               Reserver
             </button>
