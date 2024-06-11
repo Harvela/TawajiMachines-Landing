@@ -15,17 +15,14 @@ import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 
 import { Booking } from '@/components/booking';
 import Dialog from '@/components/dialog';
-import { services } from '@/utils/services';
+import { trucks } from '@/utils/services';
 
 type TitleMap = {
   [key: string]: string;
 };
 
 const titleMap: TitleMap = {
-  compacteuse: 'COMPACTEURS',
-  niveleuse: 'NIVELEUSES',
-  chargeuse: 'CHARGEUSES',
-  tractopelle: 'TRACTOPELLES',
+  trucks: 'HOWO',
 };
 
 interface PhotoPageProps {
@@ -137,7 +134,7 @@ export async function getServerSideProps(ctx: any) {
     }));
 
     const title = titleMap[folder] || 'Service';
-    const service = services.find((s) => s.link === folder);
+    const service = trucks.find((s) => s.link === folder);
 
     return {
       props: {

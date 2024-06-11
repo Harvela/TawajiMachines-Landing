@@ -1,4 +1,4 @@
-export const services = [
+export const machines = [
   {
     name: 'COMPACTEUR',
     title1: '3 tons, 2 wheels Road Roller',
@@ -38,5 +38,51 @@ export const services = [
       'Conçue pour déplacer de grandes quantités de matériaux, cette chargeuse est essentielle.',
     image:
       'https://res.cloudinary.com/dzj9hndxv/image/upload/w_500,f_auto/v1717816366/20240523_123457_page-0001_1_tnsbya.jpg',
+  },
+  {
+    name: 'BETONNIERE',
+    title1: 'A2-510L 18 HP',
+    link: 'unknown',
+    icon: '/assets/images/home/why.jpg',
+    description:
+      'Conçue pour déplacer de grandes quantités de matériaux, cette chargeuse est essentielle.',
+    image:
+      'https://res.cloudinary.com/dzj9hndxv/image/upload/v1718125849/643f4546-8d8a-4939-b036-a0c32ac7b524_qq4xen.jpg',
+  },
+  {
+    name: 'UNKNOWN2',
+    title1: 'XCMG ZL50GN LOADER',
+    link: 'unknown2',
+    icon: '/assets/images/home/why.jpg',
+    description:
+      'Conçue pour déplacer de grandes quantités de matériaux, cette chargeuse est essentielle.',
+    image:
+      'https://res.cloudinary.com/dzj9hndxv/image/upload/v1718126071/9f16e921-90b1-4614-965c-f25897684290_avv6d7.jpg',
+  },
+];
+
+export const trucks = [
+  {
+    name: 'HOWO',
+    title1: 'SINOTRUCK',
+    link: 'trucks',
+    icon: '/assets/images/home/why.jpg',
+    description:
+      'Idéal pour le compactage de sols et d’asphalte, ce rouleau compresseur assure une surface lisse et stable.',
+    image:
+      'https://res.cloudinary.com/dzj9hndxv/image/upload/v1718123404/6f5f2598-b63c-4a65-b34a-f319c42321e3_cqxcyc.jpg',
+  },
+];
+
+export const tools = [
+  {
+    name: ' PIEDS DE DALLE',
+    title1: '3.5 meters Supporting pole',
+    link: 'tools',
+    icon: '/assets/images/home/why.jpg',
+    description:
+      'Idéal pour le compactage de sols et d’asphalte, ce rouleau compresseur assure une surface lisse et stable.',
+    image:
+      'https://res.cloudinary.com/dzj9hndxv/image/upload/v1718124642/WhatsApp_Image_2024-06-11_at_18.49.40_akphyz.jpg',
   },
 ];
