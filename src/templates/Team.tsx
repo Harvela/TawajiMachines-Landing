@@ -10,11 +10,11 @@ const Team = () => {
         NOTRE EQUIPE
       </h1>
       <div className="rounded-md py-2 md:py-8">
-        <div className="mt-12 grid grid-cols-2 gap-4 text-black md:grid-cols-3 md:gap-20">
+        <div className="mt-12 grid grid-cols-1 gap-4 text-black md:grid-cols-3 md:gap-20">
           {team.map((t, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center rounded-md border border-primary-700/20 p-2 shadow-sm md:p-8"
+              className="flex flex-col items-center justify-center rounded-md border border-primary-700/20 p-8 shadow-sm"
             >
               <img
                 src={t.icon}
@@ -22,14 +22,12 @@ const Team = () => {
                 className="md:h-50 md:w-50 h-20 w-20 rounded-full"
               />
               <div className="mt-2 flex flex-col items-center gap-2">
-                <h2 className="text-[14px] font-semibold md:text-[18px]">
-                  {t.name}
-                </h2>
-                <span className="rounded-[8px] bg-primary-700/10 px-4 py-1 text-[10px] text-primary-700 md:px-8 md:text-[12px]">
+                <h2 className="text-[18px] font-semibold">{t.name}</h2>
+                <span className="rounded-[8px] bg-primary-700/10 px-4 py-1 text-[12px] text-primary-700 md:px-8">
                   {t.role}
                 </span>
               </div>
-              <div className="mt-4 flex flex-col items-center gap-1 text-[10px] md:text-[16px]">
+              <div className="mt-4 flex flex-col items-center gap-1 text-[16px]">
                 <div className="flex flex-row items-center gap-2">
                   <FaPhone className="text-primary-700" />
                   <p>{t.phone}</p>

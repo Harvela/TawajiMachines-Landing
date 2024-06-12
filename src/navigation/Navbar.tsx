@@ -118,7 +118,14 @@ const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
           <MdMenu className="cursor-pointer text-white/90" size={30} />
         </button>
 
-        <h1 className="text-[24px] text-white/90">Tawaji</h1>
+        <div className="flex flex-row items-center">
+          <img
+            src="/assets/images/home/logo.png"
+            className="h-8 rounded-lg bg-white"
+            alt="Logo"
+          />
+          <h1 className="pl-5 text-2xl font-bold text-white">TAWAJI</h1>
+        </div>
         {isOpen && (
           <div className="absolute left-0 top-0 z-[1000] flex h-[100vh] w-[350px] flex-row justify-between bg-white p-8">
             <div className="mt-12 flex flex-col gap-8">
