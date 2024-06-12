@@ -59,33 +59,35 @@ export function Contact() {
         CONTACT
       </h1>
       <div className="my-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
-        <div className="flex flex-row items-center gap-6 rounded-md bg-primary-700 px-8 py-4 text-white md:py-10">
-          <div className="flex w-[12%] flex-row items-center justify-center rounded-full bg-white p-2 text-primary-700 md:h-full md:w-[18%] md:p-4">
+        <div className="flex flex-row items-center gap-6 rounded-md bg-primary-700 px-8 py-4 text-white md:py-6">
+          <div className="flex w-[12%] flex-row items-center justify-center rounded-full bg-white p-2 text-primary-700 md:h-[65%] md:w-[18%] md:p-4">
             <FaPhoneVolume className="text-lg md:text-2xl" />
           </div>
           <div className="flex flex-col gap-2 font-semibold">
             <h2 className="text-[16px] md:text-[20px]">Appelez nous</h2>
-            <p className="text-[20px] md:text-[24px]">+243 991746590</p>
+            <p className="text-[20px] md:text-[20px]">+243 991746590</p>
           </div>
         </div>
 
-        <div className="flex flex-row items-center gap-6 rounded-md border-2 border-primary-700 px-8 py-4 text-black md:py-10">
-          <div className="flex w-[12%] flex-row items-center justify-center rounded-full bg-primary-700 p-2 text-white md:h-full md:w-[18%] md:p-4">
+        <div className="flex flex-row items-center gap-6 rounded-md border-2 border-primary-700 px-8 py-4 text-black md:py-6">
+          <div className="flex w-[12%] flex-row items-center justify-center rounded-full bg-primary-700 p-2 text-white md:h-[65%] md:w-[18%] md:p-4">
             <FaClock className="text-lg md:text-2xl" />
           </div>
           <div className="flex flex-col gap-2 font-semibold text-primary-700">
             <h2 className="text-[16px] md:text-[20px]">Du Lundi - Dimanche</h2>
-            <p className="text-[20px] md:text-[24px]">09.00 - 20: 00</p>
+            <p className="text-[20px] md:text-[20px]">09.00 - 20: 00</p>
           </div>
         </div>
 
-        <div className="flex flex-row items-center gap-6 rounded-md bg-primary-700 px-8 py-4 text-white md:py-10">
-          <div className="flex w-[12%] flex-row items-center justify-center rounded-full bg-white p-2 text-primary-700 md:h-full md:w-[18%] md:p-4">
+        <div className="flex flex-row items-center gap-6 rounded-md bg-primary-700 px-8 py-4 text-white md:py-6">
+          <div className="flex w-[12%] flex-row items-center justify-center rounded-full bg-white p-2 text-primary-700 md:h-[60%] md:w-[18%] md:p-4">
             <FaMapMarkerAlt className="text-lg md:text-2xl" />
           </div>
           <div className="flex flex-col gap-2 font-semibold">
             <h2 className="text-[16px] md:text-[20px]">Addresse</h2>
-            <p className="text-[20px] md:text-[24px]">Goma, Q. les volcans</p>
+            <p className="text-[20px] md:text-[20px]">
+              C. Lubumbashi, Q. Kiwele, Av. Lufira, N. 659
+            </p>
           </div>
         </div>
       </div>

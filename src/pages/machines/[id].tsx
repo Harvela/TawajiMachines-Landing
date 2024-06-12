@@ -109,14 +109,14 @@ function PhotoPage({ photos, title, title1, description }: PhotoPageProps) {
           <p className="text-[14px] text-gray-700 md:text-[18px]">
             {description}
           </p>
-          {/* <button
+          <button
             onClick={() => {
               setShowForm(true);
             }}
             className="mt-4 w-fit rounded-md bg-primary-700 px-10 py-2 text-sm text-white"
           >
             Reserver
-          </button> */}
+          </button>
         </div>
       </div>
 

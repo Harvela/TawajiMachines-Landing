@@ -5,11 +5,11 @@ const Hero: React.FC = () => {
   return (
     <div className="">
       <div id="home" className=" flex flex-row">
-        <div className="mx-8 mt-[0px] flex h-[80vh]  w-full flex-col justify-center text-center md:mx-16 md:mt-[-40px]  md:h-auto md:w-[50%] md:text-start">
+        <div className="flex h-[80vh] w-full flex-col items-center justify-center p-4 text-center md:p-0">
           <h2 className="text-[14px] font-bold text-white/90 md:text-[16px]">
             TAWAJI CONSTRUCTION MACHINES
           </h2>
-          <h1 className="my-[30px] text-[28px] font-semibold text-white/80 md:text-[50px]">
+          <h1 className="my-[30px] text-center text-[28px] font-semibold text-white/80 md:w-[80%] md:text-[60px]">
             Le collaborateur idéal pour vos projets de construction
           </h1>
           <div className="mt-[20px] flex flex-col gap-5 md:flex-row">
@@ -22,13 +22,13 @@ const Hero: React.FC = () => {
             </Link>
           </div>
         </div>
-        <div className="hidden w-[50%]  md:block">
+        {/* <div className="hidden w-[50%]  md:block">
           <img
             src="/assets/images/home/truck.png"
             alt="Hero"
             className="z-50 h-[100vh] w-[90%] object-cover"
           />
-        </div>
+        </div> */}
       </div>
       {/* <div className="mt-[140px] md:mt-[-140px]">
         <CanvasRevealEffectDemo2 />

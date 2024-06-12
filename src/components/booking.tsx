@@ -71,7 +71,7 @@ const Booking: React.FC<{ message?: string; onClose: any }> = ({
           <div className="flex flex-row justify-between gap-4">
             <button
               type="submit"
-              className="hover:bg-blue/70 flex w-full justify-center rounded-md bg-primary-700 px-3 py-1.5 text-sm font-semibold leading-6 text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="hover:bg-blue/70 flex w-full justify-center rounded-md bg-primary-700 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Envoyer
             </button>

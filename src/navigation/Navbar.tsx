@@ -45,7 +45,7 @@ const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
         width: '100%',
         zIndex: 40,
         top: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.6)',
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
       }}
     >
       <div className="hidden flex-row items-center justify-between px-4 py-6 md:flex lg:px-16">
