@@ -26,7 +26,7 @@ const titleMap: TitleMap = {
   niveleuse: 'NIVELEUSES',
   chargeuse: 'CHARGEUSES',
   tractopelle: 'TRACTOPELLES',
-  unknown: 'UNKNOWN',
+  betonniere: 'BETONNIERE',
   unknown2: 'UNKNOWN2',
 };
 
@@ -74,6 +74,13 @@ function PhotoPage({ photos, title, title1, description }: PhotoPageProps) {
                 className="mr-2 flex flex-row items-center justify-between text-[16px] md:text-[20px]"
               >
                 HOME
+                <MdOutlineNavigateNext className="text-xl text-white" />
+              </Link>
+              <Link
+                href="/machines"
+                className="mr-2 flex flex-row items-center justify-between text-[16px] md:text-[20px]"
+              >
+                MACHINES
                 <MdOutlineNavigateNext className="text-xl text-white" />
               </Link>
               <Link

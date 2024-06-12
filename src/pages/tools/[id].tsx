@@ -72,6 +72,13 @@ function PhotoPage({ photos, title, title1, description }: PhotoPageProps) {
                 <MdOutlineNavigateNext className="text-xl text-white" />
               </Link>
               <Link
+                href="/tools"
+                className="mr-2 flex flex-row items-center justify-between text-[16px] md:text-[20px]"
+              >
+                ÉQUIPEMENT DE CONSTRUCTION
+                <MdOutlineNavigateNext className="text-xl text-white" />
+              </Link>
+              <Link
                 href="/#categories"
                 className="flex flex-row items-center justify-between text-[16px] text-[#71AEFD] md:text-[20px]"
               >

@@ -42,7 +42,7 @@ export const machines = [
   {
     name: 'BETONNIERE',
     title1: 'A2-510L 18 HP',
-    link: 'unknown',
+    link: 'betonniere',
     icon: '/assets/images/home/why.jpg',
     description:
       'Conçue pour déplacer de grandes quantités de matériaux, cette chargeuse est essentielle.',
