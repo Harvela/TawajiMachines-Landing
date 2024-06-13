@@ -1,82 +1,31 @@
 import React from 'react';
-import { MdClose } from 'react-icons/md';
+import { FaPhone } from 'react-icons/fa';
+import { MdClose, MdMail } from 'react-icons/md';
 
-const Booking: React.FC<{ message?: string; onClose: any }> = ({
-  message,
-  onClose,
-}) => {
+const Booking: React.FC<{ message?: string; onClose: any }> = ({ onClose }) => {
   return (
-    <div className="flex min-h-full flex-col justify-center px-2 py-6 lg:px-2">
+    <div className="flex min-h-full flex-col justify-center p-4 md:p-8">
       <button
         onClick={() => onClose?.()}
-        className="flex flex-row items-center justify-end p-2 text-[24px] text-[#c61a09]"
+        className="flex flex-row items-center justify-end text-[24px] text-[#c61a09]"
       >
         <MdClose className="cursor-pointer" />
-      </button>
-      <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-        <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-          Reservation
-        </h2>
-      </div>
-
-      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form className="space-y-6" action="#" method="POST">
-          <div>
-            <label className="block text-sm font-medium leading-6 text-gray-900">
-              Votre addresse email ou Telephone
-            </label>
-            <div className="mt-2">
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
+      </button>{' '}
+      <h2 className="mb-10 text-3xl font-bold leading-9 tracking-tight text-primary-700">
+        Reservation
+      </h2>
+      <div className="">
+        <h2 className="mb-8 text-[20px]">Pour vos reservations, contactez: </h2>
+        <div className="mt-4 flex flex-col gap-4 text-[18px]">
+          <div className="flex flex-row gap-3">
+            <FaPhone className="text-primary-700" />
+            <p>+243 997455238</p>
           </div>
-
-          <div>
-            <label className="block text-sm font-medium leading-6 text-gray-900">
-              Votre Nom complet
-            </label>
-            <div className="mt-2">
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
+          <div className="flex flex-row items-center gap-3">
+            <MdMail className="text-primary-700" />
+            <a href="mailto:tawaji.congo@gmail.com">tawaji.congo@gmail.com</a>
           </div>
-
-          <div>
-            <div className="flex items-center justify-between">
-              <label className="block text-sm font-medium leading-6 text-gray-900">
-                Message
-              </label>
-            </div>
-            <div className="mt-2">
-              <textarea
-                id="msg"
-                name="msg"
-                defaultValue={message}
-                required
-                className="block h-[150px] w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
-
-          <div className="flex flex-row justify-between gap-4">
-            <button
-              type="submit"
-              className="hover:bg-blue/70 flex w-full justify-center rounded-md bg-primary-700 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Envoyer
-            </button>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
   );

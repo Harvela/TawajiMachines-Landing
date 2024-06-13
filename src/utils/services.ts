@@ -40,9 +40,9 @@ export const machines = [
       'https://res.cloudinary.com/dzj9hndxv/image/upload/w_500,f_auto/v1717816366/20240523_123457_page-0001_1_tnsbya.jpg',
   },
   {
-    name: 'BETONNIERE',
+    name: 'UNKNOWN',
     title1: 'A2-510L 18 HP',
-    link: 'betonniere',
+    link: 'unknown',
     icon: '/assets/images/home/why.jpg',
     description:
       'Conçue pour déplacer de grandes quantités de matériaux, cette chargeuse est essentielle.',
@@ -50,9 +50,9 @@ export const machines = [
       'https://res.cloudinary.com/dzj9hndxv/image/upload/v1718125849/643f4546-8d8a-4939-b036-a0c32ac7b524_qq4xen.jpg',
   },
   {
-    name: 'UNKNOWN2',
+    name: 'BETONNIERE',
     title1: 'XCMG ZL50GN LOADER',
-    link: 'unknown2',
+    link: 'betonniere',
     icon: '/assets/images/home/why.jpg',
     description:
       'Conçue pour déplacer de grandes quantités de matériaux, cette chargeuse est essentielle.',
