@@ -5,7 +5,7 @@ export const machines = [
     link: 'compacteuse',
     icon: '/assets/images/home/why.jpg',
     description:
-      'Idéal pour le compactage de sols et d’asphalte, ce rouleau compresseur assure une surface lisse et stable.',
+      'Idéal pour le compactage de sols et d’asphalte, ce compresseur assure une surface lisse et stable.',
     image:
       'https://res.cloudinary.com/dzj9hndxv/image/upload/w_500,f_auto/v1717816579/20240527_111949_page-0001_1_e5iww6.jpg',
   },
@@ -40,12 +40,12 @@ export const machines = [
       'https://res.cloudinary.com/dzj9hndxv/image/upload/w_500,f_auto/v1717816366/20240523_123457_page-0001_1_tnsbya.jpg',
   },
   {
-    name: 'UNKNOWN',
-    title1: 'A2-510L 18 HP',
+    name: 'MINI-COMPACTEUR',
+    title1: '1.5, 2 WHEELS ROAD ROLLER',
     link: 'unknown',
     icon: '/assets/images/home/why.jpg',
     description:
-      'Conçue pour déplacer de grandes quantités de matériaux, cette chargeuse est essentielle.',
+      'Conçue pour compacter des matériaux tels que le sol afin de créer une surface solide et uniforme.',
     image:
       'https://res.cloudinary.com/dzj9hndxv/image/upload/v1718125849/643f4546-8d8a-4939-b036-a0c32ac7b524_qq4xen.jpg',
   },
@@ -55,7 +55,7 @@ export const machines = [
     link: 'betonniere',
     icon: '/assets/images/home/why.jpg',
     description:
-      'Conçue pour déplacer de grandes quantités de matériaux, cette chargeuse est essentielle.',
+      'Conçue pour produire du béton de manière homogène pour des travaux de construction',
     image:
       'https://res.cloudinary.com/dzj9hndxv/image/upload/v1718126071/9f16e921-90b1-4614-965c-f25897684290_avv6d7.jpg',
   },

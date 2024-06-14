@@ -19,7 +19,7 @@ const WhyUs = () => {
       </div>
       <div className="mt-[30px] w-full text-center md:mt-[-30px] md:w-[50%] md:text-start">
         <p className="text-[14px] font-semibold text-primary-700 md:text-[20px]">
-          BIENVENUE CHEZ TAWAJI CONSTRUCTION MACHINES
+          BIENVENUE CHEZ TAWAJI CONSTRUCTION
         </p>
         <h2 className="my-[20px] text-[16px] font-bold md:text-[24px]">
           Le collaborateur idéal pour vos projets de construction

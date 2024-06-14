@@ -105,7 +105,7 @@ export function Contact() {
           <div className="flex flex-col md:flex-row md:items-center md:gap-8">
             <Input
               name=""
-              label="First Name"
+              label="Nom"
               placeholder=""
               bgColor="mb-4 h-[50px] w-full rounded-md border border-black/20"
               onChange={(e: any) => setFirstname(e)}
@@ -113,7 +113,7 @@ export function Contact() {
             />
             <Input
               name=""
-              label="Last Name"
+              label="Post-nom"
               placeholder=""
               bgColor="mb-4 h-[50px] w-full rounded-md border border-black/20"
               onChange={(e: any) => setLastname(e)}
@@ -131,7 +131,7 @@ export function Contact() {
             />
             <Input
               name=""
-              label="Email"
+              label="Addresse email"
               placeholder=""
               bgColor="mb-4 h-[50px] w-full rounded-md border border-black/20"
               onChange={(e: any) => setEmail(e)}

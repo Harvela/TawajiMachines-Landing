@@ -19,13 +19,14 @@ const Services = () => {
               alt=""
               className="h-[70%] w-full object-cover md:h-[60%]"
             />
-            <div className="flex flex-col gap-2 p-2 md:gap-6 md:p-6">
+            <div className="flex flex-col gap-4 p-4">
               <h1 className="text-[14px] font-bold text-primary-700 md:text-xl">
                 Machines
               </h1>
               <p className="text-[11px] md:text-sm">
-                Idéal pour le compactage de sols et d’asphalte, ce rouleau
-                compresseur assure une surface lisse et stable.
+                Des équipements spécialisés utilisés pour accomplir diverses
+                tâches sur les chantiers, telles que le terrassement, le levage,
+                le transport de matériaux et la finition des surfaces.
               </p>
               <Link href="/machines">
                 <button className="animate-infinite w-[40%] animate-wiggle rounded-lg bg-primary-700 p-2 text-[11px] text-white md:text-sm">
@@ -41,13 +42,14 @@ const Services = () => {
               alt=""
               className="h-[70%] w-full object-cover md:h-[60%]"
             />
-            <div className="flex flex-col gap-2 p-2 md:gap-6 md:p-6">
+            <div className="flex flex-col gap-4 p-4">
               <h1 className="text-[14px] font-bold text-primary-700 md:text-xl">
                 CAMIONS
               </h1>
               <p className="text-[11px] md:text-sm">
-                Idéal pour le compactage de sols et d’asphalte, ce rouleau
-                compresseur assure une surface lisse et stable.
+                Véhicules motorisés conçus pour transporter des marchandises
+                lourdes et volumineuses sur de longues distances, offrant une
+                solution essentielle pour la logistique et le commerce.
               </p>
               <Link href="/trucks">
                 <button className="animate-infinite w-[40%] animate-wiggle rounded-lg bg-primary-700 p-2 text-[11px] text-white md:text-sm">
@@ -63,13 +65,15 @@ const Services = () => {
               alt=""
               className="h-[70%] w-full object-cover md:h-[60%]"
             />
-            <div className="flex flex-col gap-2 p-2 md:gap-6 md:p-6">
+            <div className="flex flex-col gap-4 p-4">
               <h1 className="text-[14px] font-bold text-primary-700 md:text-xl">
                 ÉQUIPEMENT DE CONSTRUCTION
               </h1>
               <p className="text-[11px] md:text-sm">
-                Idéal pour le compactage de sols et d’asphalte, ce rouleau
-                compresseur assure une surface lisse et stable.
+                Les équipements de construction sont des outils et des machines
+                utilisés pour faciliter et accélérer les travaux de
+                construction, allant du terrassement à la finition des
+                structures.
               </p>
               <Link href="/tools">
                 <button className="animate-infinite w-[40%] animate-wiggle rounded-lg bg-primary-700 p-2 text-[11px] text-white md:text-sm">

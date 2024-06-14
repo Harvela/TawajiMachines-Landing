@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
       <div id="home" className=" flex flex-row">
         <div className="flex h-[80vh] w-full flex-col items-center justify-center p-4 text-center md:p-0">
           <h2 className="text-[14px] font-bold text-white/90 md:text-[16px]">
-            TAWAJI CONSTRUCTION MACHINES
+            TAWAJI CONSTRUCTION
           </h2>
           <h1 className="my-[30px] text-center text-[28px] font-semibold text-white/80 md:w-[80%] md:text-[60px]">
             Le collaborateur idéal pour vos projets de construction
