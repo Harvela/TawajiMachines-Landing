@@ -27,7 +27,7 @@ const titleMap: TitleMap = {
   chargeuse: 'CHARGEUSES',
   tractopelle: 'TRACTOPELLES',
   betonniere: 'BETONNIERE',
-  unknown: 'UNKNOWN',
+  minicompacteur: 'MINI-COMPACTEUR',
 };
 
 interface PhotoPageProps {

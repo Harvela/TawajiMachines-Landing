@@ -42,7 +42,7 @@ export const machines = [
   {
     name: 'MINI-COMPACTEUR',
     title1: '1.5, 2 WHEELS ROAD ROLLER',
-    link: 'unknown',
+    link: 'minicompacteur',
     icon: '/assets/images/home/why.jpg',
     description:
       'Conçue pour compacter des matériaux tels que le sol afin de créer une surface solide et uniforme.',
