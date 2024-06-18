@@ -68,7 +68,7 @@ export const trucks = [
     link: 'trucks',
     icon: '/assets/images/home/why.jpg',
     description:
-      'Idéal pour le compactage de sols et d’asphalte, ce rouleau compresseur assure une surface lisse et stable.',
+      'Un véhicule robuste et fiable, idéal pour le transport de charges lourdes sur de longues distances.',
     image:
       'https://res.cloudinary.com/dzj9hndxv/image/upload/v1718123404/6f5f2598-b63c-4a65-b34a-f319c42321e3_cqxcyc.jpg',
   },
@@ -81,7 +81,7 @@ export const tools = [
     link: 'tools',
     icon: '/assets/images/home/why.jpg',
     description:
-      'Idéal pour le compactage de sols et d’asphalte, ce rouleau compresseur assure une surface lisse et stable.',
+      'Un outil de construction supportant et stabilisant une dalle, assurant une distribution uniforme des charges.',
     image:
       'https://res.cloudinary.com/dzj9hndxv/image/upload/v1718124642/WhatsApp_Image_2024-06-11_at_18.49.40_akphyz.jpg',
   },

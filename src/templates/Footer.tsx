@@ -1,3 +1,7 @@
+import Link from 'next/link';
+import { FaPhoneVolume } from 'react-icons/fa6';
+import { MdMail } from 'react-icons/md';
+
 const links = {
   grid1: [
     { title: 'Accueil', link: 'home' },
@@ -21,10 +25,23 @@ const links = {
 const Footer = () => (
   <footer className="bg-primary-700 p-4 py-8 md:p-16">
     <div className="text-text flex flex-col-reverse justify-between dark:bg-gray-800 md:flex-row ">
-      <div className="mb-6 md:mb-0">
-        <p className="mt-8 font-bold text-white md:mt-0">
-          Your Perfect Collaborator <br />
-          on any Project
+      <div className="mb-6 w-[100%] md:mb-0 md:w-[40%]">
+        <Link href="#" className="flex flex-row items-center">
+          <img
+            src="/assets/images/home/logo.png"
+            className="h-10 rounded-lg bg-white"
+            alt="Logo"
+          />
+          <h1 className="pl-5 text-2xl font-bold text-white">
+            TAWAJI CONSTRUCTION
+          </h1>
+        </Link>
+
+        <p className="mt-8 text-[12px] text-white md:text-[16px] ">
+          Le collaborateur idéal pour vos projets de construction qui propose
+          des équipements de qualité, comprenant des machines robustes, des
+          camions performants, et des outils de construction innovants pour
+          garantir l&apos;efficacité et la durabilité de vos travaux.
         </p>
 
         <div className="mt-8 flex flex-row items-center gap-8">
@@ -78,7 +95,7 @@ const Footer = () => (
         </div>
       </div>
       <div>
-        <h2 className="text-md mb-6 mt-12 font-bold uppercase text-white md:mt-0 ">
+        <h2 className="mb-6 mt-12 text-[16px] font-bold uppercase text-white md:mt-0 md:text-[20px] ">
           Liens utiles
         </h2>
         <ul className="text-white dark:text-gray-400">
@@ -92,29 +109,25 @@ const Footer = () => (
         </ul>
       </div>
 
-      <div className="w-[100%] md:w-[40%]">
-        <h2 className="mb-4 text-[16px] font-semibold text-white md:text-[20px] ">
-          TAWAJI CONSTRUCTION MACHINES
+      <div>
+        <h2 className="mb-6 mt-12 text-[16px] font-bold uppercase text-white md:mt-0 md:text-[20px]">
+          Nous contacter
         </h2>
-        <p className="mb-8 text-[12px] text-white md:text-[16px] ">
-          Le collaborateur idéal pour vos projets de construction
-        </p>
-        <div className="flex flex-row items-center gap-8">
-          {/* <img
-            src="/assets/images/home/airtel.png"
-            alt="partner1"
-            className="size-16 rounded-lg object-contain"
-          />
-          <img
-            src="/assets/images/home/orange.png"
-            alt="partner2"
-            className="size-16 rounded-lg object-contain"
-          />
-          <img
-            src="/assets/images/home/m-pesa.png"
-            alt="partner3"
-            className="size-16 rounded-lg object-contain"
-          /> */}
+
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-row items-center gap-6 rounded-md bg-primary-700 text-white">
+            <FaPhoneVolume className="text-[14px] text-white md:text-[16px]" />
+            <p className="text-[14px] md:text-[16px]">+243 997455238</p>
+          </div>
+          <div className="flex flex-row items-center gap-6 rounded-md bg-primary-700 text-white">
+            <MdMail className="text-[14px] text-white md:text-[16px]" />
+            <a
+              href="mailto:tawaji.congo@gmail.com"
+              className="text-[14px] md:text-[16px]"
+            >
+              tawaji.congo@gmail.com
+            </a>
+          </div>
         </div>
       </div>
     </div>

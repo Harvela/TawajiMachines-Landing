@@ -115,7 +115,7 @@ function PhotoPage({ photos, title, title1, description }: PhotoPageProps) {
             }}
             className="mt-4 w-fit rounded-md bg-primary-700 px-10 py-2 text-sm text-white"
           >
-            Reserver
+            Réserver
           </button>
         </div>
       </div>

@@ -85,7 +85,7 @@ const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
             }`}
             onClick={() => handleSetActive('categories')}
           >
-            Nos Categories
+            Notre Catalogue
           </Link>
           <Link
             href="/#team"
@@ -94,7 +94,7 @@ const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
             }`}
             onClick={() => handleSetActive('team')}
           >
-            Notre equipe
+            Notre équipe
           </Link>
         </div>
         <Link
@@ -169,21 +169,7 @@ const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
                   handleSetActive('categories');
                 }}
               >
-                Nos categories
-              </Link>
-              <Link
-                href="/#galery"
-                className={`text-lg font-medium text-primary-700 ${
-                  activeMenu === 'galery'
-                    ? 'border-b-2 border-primary-700'
-                    : 'text-primary-700'
-                }`}
-                onClick={() => {
-                  handleCloseMenu();
-                  handleSetActive('galery');
-                }}
-              >
-                Gallerie
+                Notre Catalogue
               </Link>
               <Link
                 href="/#team"
@@ -197,7 +183,7 @@ const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
                   handleSetActive('team');
                 }}
               >
-                Equipe
+                Notre équipe
               </Link>
               <Link
                 href="/#contact"

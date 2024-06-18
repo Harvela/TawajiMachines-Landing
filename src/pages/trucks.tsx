@@ -55,7 +55,7 @@ const Trucks = () => {
                   <p className="text-[11px] md:text-sm">{truck.description}</p>
                   <Link href={`/trucks/${truck.link}`}>
                     <button className="w-[40%] rounded-sm bg-primary-700 p-1 text-[11px] text-white md:text-sm">
-                      Voir les details
+                      Voir les détails
                     </button>
                   </Link>
                 </div>

@@ -57,7 +57,7 @@ const Machines = () => {
                   </p>
                   <Link href={`/machines/${machine.link}`}>
                     <button className="w-[40%] rounded-sm bg-primary-700 p-1 text-[11px] text-white md:text-sm">
-                      Voir les details
+                      Voir les détails
                     </button>
                   </Link>
                 </div>
