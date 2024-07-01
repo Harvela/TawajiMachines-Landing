@@ -1,3 +1,6 @@
+import { BsSend } from 'react-icons/bs';
+import { LuAnchor, LuKey } from 'react-icons/lu';
+
 export const machines = [
   {
     name: 'COMPACTEUR',
@@ -84,5 +87,23 @@ export const tools = [
       'Un outil de construction supportant et stabilisant une dalle, assurant une distribution uniforme des charges.',
     image:
       'https://res.cloudinary.com/dzj9hndxv/image/upload/v1718124642/WhatsApp_Image_2024-06-11_at_18.49.40_akphyz.jpg',
+  },
+];
+
+export const services = [
+  {
+    name: 'TAWAJI Construction',
+    link: 'tawaji-construction',
+    icon: LuAnchor,
+  },
+  {
+    name: 'TAWAJI Travel',
+    link: 'https://e-ticket-virid.vercel.app',
+    icon: BsSend,
+  },
+  {
+    name: 'TAWAJI Security',
+    link: '/security',
+    icon: LuKey,
   },
 ];
