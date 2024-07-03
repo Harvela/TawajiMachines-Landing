@@ -26,7 +26,7 @@ const Tools = () => {
               <MdOutlineNavigateNext className="text-xl text-white" />
             </Link>
             <Link
-              href="/#categories"
+              href="/tools"
               className="flex flex-row items-center justify-between text-[14px] text-[#71AEFD] md:text-[18px]"
             >
               ÉQUIPEMENT DE CONSTRUCTION

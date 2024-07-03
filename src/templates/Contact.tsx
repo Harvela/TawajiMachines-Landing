@@ -74,7 +74,7 @@ export function Contact() {
             <FaClock className="text-lg md:text-2xl" />
           </div>
           <div className="flex flex-col gap-2 font-semibold text-primary-700">
-            <h2 className="text-[16px] md:text-[20px]">Du Lundi - Samedi</h2>
+            <h2 className="text-[16px] md:text-[20px]">Du Lundi - Vendredi</h2>
             <p className="text-[20px] md:text-[20px]">07.00 - 18: 00</p>
           </div>
         </div>
