@@ -51,7 +51,7 @@ const Tawaji: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative h-[100vh]">
+    <div className="relative h-[100vh]" id="home">
       <style jsx>{`
         .background-image.hovered {
           transform: scale(1.3);

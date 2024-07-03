@@ -4,7 +4,7 @@ import { MdMail } from 'react-icons/md';
 
 const links = {
   grid1: [
-    { title: 'Accueil', link: '/tawaji-construction/#home' },
+    { title: 'Accueil', link: '/#home' },
     { title: 'A Propos de nous', link: '/tawaji-construction/#about' },
     { title: 'Nos categories', link: '/tawaji-construction/#categories' },
     { title: 'Notre equipe', link: '/tawaji-construction/#team' },

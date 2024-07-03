@@ -19,7 +19,7 @@ const Tools = () => {
           </h1>
           <div className="m-auto flex flex-row items-center justify-center p-8 text-sm font-semibold text-white">
             <Link
-              href="/#home"
+              href="/tawaji-construction/#home"
               className="mr-2 flex flex-row items-center justify-between text-[16px] md:text-[20px]"
             >
               HOME

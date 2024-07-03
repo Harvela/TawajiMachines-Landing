@@ -59,7 +59,7 @@ const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
         </Link>
         <div className="flex flex-row gap-8">
           <Link
-            href="/tawaji-construction/#home"
+            href="/#home"
             className={`text-[16px] text-white ${
               activeMenu === 'home' ? 'border-b-2 border-white' : 'text-white'
             }`}
@@ -130,7 +130,7 @@ const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
           <div className="absolute left-0 top-0 z-[1000] flex h-[100vh] w-[350px] flex-row justify-between bg-white p-8">
             <div className="mt-12 flex flex-col gap-8">
               <Link
-                href="/tawaji-construction/#home"
+                href="/#home"
                 className={`text-lg font-medium text-primary-700 ${
                   activeMenu === 'home'
                     ? 'border-b-2 border-primary-700'
