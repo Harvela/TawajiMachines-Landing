@@ -75,7 +75,7 @@ export function Contact() {
           </div>
           <div className="flex flex-col gap-2 font-semibold text-primary-700">
             <h2 className="text-[16px] md:text-[20px]">Du Lundi - Vendredi</h2>
-            <p className="text-[20px] md:text-[20px]">07.00 - 18: 00</p>
+            <p className="text-[20px] md:text-[20px]">08.00 - 16: 00</p>
           </div>
         </div>
 
