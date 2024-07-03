@@ -4,11 +4,11 @@ import { MdMail } from 'react-icons/md';
 
 const links = {
   grid1: [
-    { title: 'Accueil', link: 'home' },
-    { title: 'A Propos de nous', link: 'about' },
-    { title: 'Nos categories', link: 'categories' },
-    { title: 'Notre equipe', link: 'team' },
-    { title: 'Contact', link: 'contact' },
+    { title: 'Accueil', link: '/tawaji-construction/#home' },
+    { title: 'A Propos de nous', link: '/tawaji-construction/#about' },
+    { title: 'Nos categories', link: '/tawaji-construction/#categories' },
+    { title: 'Notre equipe', link: '/tawaji-construction/#team' },
+    { title: 'Contact', link: '/tawaji-construction/#contact' },
   ],
   grid2: [
     {
@@ -101,7 +101,7 @@ const Footer = () => (
         <ul className="text-white dark:text-gray-400">
           {links.grid1.map((grid, key) => (
             <li key={key} className="mb-4">
-              <a href={grid.link} target="_blank" className="hover:underline">
+              <a href={grid.link} className="hover:underline">
                 {grid.title}
               </a>
             </li>

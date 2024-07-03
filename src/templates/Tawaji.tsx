@@ -82,10 +82,7 @@ const Tawaji: React.FC = () => {
       </div>
       <div className="absolute left-0 top-0 mt-[60px] flex h-[100vh] w-full flex-col justify-between">
         <TawajiNavbar />
-        <div
-          id="home"
-          className="flex h-[90vh] w-full flex-col items-center justify-center p-4 text-center md:p-0"
-        >
+        <div className="flex h-[90vh] w-full flex-col items-center justify-center p-4 text-center md:p-0">
           <Link href="#" className="flex flex-row items-center">
             <img
               src="/assets/images/home/logo.png"

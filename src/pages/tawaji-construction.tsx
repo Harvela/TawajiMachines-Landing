@@ -1,8 +1,8 @@
-import { Footer } from 'flowbite-react';
 import React, { useEffect, useState } from 'react';
 
 import { Navbar } from '@/navigation/Navbar';
 import { Contact } from '@/templates/Contact';
+import { Footer } from '@/templates/Footer';
 import { Hero } from '@/templates/Hero';
 import { Services } from '@/templates/Services';
 import { Team } from '@/templates/Team';
