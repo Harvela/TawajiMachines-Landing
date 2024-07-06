@@ -8,7 +8,7 @@ import { services } from '@/utils/services';
 const backgroundImages = [
   '/assets/images/home/background.jpg',
   '/assets/images/home/background2.jpg',
-  'https://res.cloudinary.com/dzj9hndxv/image/upload/v1718123404/6f5f2598-b63c-4a65-b34a-f319c42321e3_cqxcyc.jpg',
+  '/assets/images/home/securityb.jpg',
   '/assets/images/home/techback.jpg',
 ];
 
