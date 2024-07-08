@@ -25,9 +25,10 @@ const WhyUs = () => {
           Le collaborateur idéal pour vos projets de construction
         </h2>
         <p className="text-[12px] md:text-[16px]">
-          Nous sommes spécialisés dans la location et le transport de machinerie
-          lourde, garantissant une performance optimale et une fiabilité
-          inégalée.
+          Nous sommes une entreprise basée à Lubumbashi dans la province du Haut
+          Katanga en RD Congo, spécialisée dans la location et le transport de
+          machinerie lourde, garantissant une performance optimale et une
+          fiabilité inégalée.
         </p>
 
         <div className="mt-8 flex flex-col gap-8 text-start">

@@ -13,11 +13,11 @@ const Services = () => {
           CATEGORIES
         </h1>
         <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
-          <div className="flex h-[400px] flex-col rounded-lg bg-white text-black shadow-md md:h-[80vh]">
+          <div className="flex h-[500px] flex-col rounded-lg bg-white text-black shadow-md md:h-[80vh]">
             <img
               src="https://res.cloudinary.com/dzj9hndxv/image/upload/v1717816366/20240523_123434_page-0001_1_ocljak.jpg"
               alt=""
-              className="h-[70%] w-full object-cover md:h-[60%]"
+              className="h-[65%] w-full object-cover md:h-[50%]"
             />
             <div className="flex flex-col gap-4 p-4">
               <h1 className="text-[14px] font-bold text-primary-700 md:text-xl">
@@ -29,18 +29,18 @@ const Services = () => {
                 le transport de matériaux et la finition des surfaces.
               </p>
               <Link href="/machines">
-                <button className="animate-infinite w-[40%] animate-wiggle rounded-lg bg-primary-700 p-2 text-[11px] text-white md:text-sm">
+                <button className="animate-infinite w-[50%] animate-wiggle rounded-lg bg-primary-700 p-2 text-[11px] text-white md:text-sm">
                   Voir les machines
                 </button>
               </Link>
             </div>
           </div>
 
-          <div className="flex h-[400px] flex-col rounded-lg bg-white text-black shadow-md md:h-[80vh]">
+          <div className="flex h-[500px] flex-col rounded-lg bg-white text-black shadow-md md:h-[80vh]">
             <img
               src="https://res.cloudinary.com/dzj9hndxv/image/upload/v1718123404/6f5f2598-b63c-4a65-b34a-f319c42321e3_cqxcyc.jpg"
               alt=""
-              className="h-[70%] w-full object-cover md:h-[60%]"
+              className="h-[65%] w-full object-cover md:h-[50%]"
             />
             <div className="flex flex-col gap-4 p-4">
               <h1 className="text-[14px] font-bold text-primary-700 md:text-xl">
@@ -52,18 +52,18 @@ const Services = () => {
                 solution essentielle pour la logistique et le commerce.
               </p>
               <Link href="/trucks">
-                <button className="animate-infinite w-[40%] animate-wiggle rounded-lg bg-primary-700 p-2 text-[11px] text-white md:text-sm">
+                <button className="animate-infinite w-[50%] animate-wiggle rounded-lg bg-primary-700 p-2 text-[11px] text-white md:text-sm">
                   Voir les camions
                 </button>
               </Link>
             </div>
           </div>
 
-          <div className="flex h-[400px] flex-col rounded-lg bg-white text-black shadow-md md:h-[80vh]">
+          <div className="flex h-[500px] flex-col rounded-lg bg-white text-black shadow-md md:h-[80vh]">
             <img
               src="https://res.cloudinary.com/dzj9hndxv/image/upload/v1718124642/WhatsApp_Image_2024-06-11_at_18.49.40_akphyz.jpg"
               alt=""
-              className="h-[70%] w-full object-cover md:h-[60%]"
+              className="h-[65%] w-full object-cover md:h-[50%]"
             />
             <div className="flex flex-col gap-4 p-4">
               <h1 className="text-[14px] font-bold text-primary-700 md:text-xl">
@@ -76,7 +76,7 @@ const Services = () => {
                 structures.
               </p>
               <Link href="/tools">
-                <button className="animate-infinite w-[40%] animate-wiggle rounded-lg bg-primary-700 p-2 text-[11px] text-white md:text-sm">
+                <button className="animate-infinite w-[50%] animate-wiggle rounded-lg bg-primary-700 p-2 text-[11px] text-white md:text-sm">
                   Voir les outils
                 </button>
               </Link>

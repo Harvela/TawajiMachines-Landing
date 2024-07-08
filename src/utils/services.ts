@@ -1,4 +1,5 @@
 import { BsSend } from 'react-icons/bs';
+import { GrTechnology } from 'react-icons/gr';
 import { LuAnchor, LuKey } from 'react-icons/lu';
 
 export const machines = [
@@ -105,5 +106,10 @@ export const services = [
     name: 'TAWAJI Security',
     link: '/security',
     icon: LuKey,
+  },
+  {
+    name: 'TAWAJI Tech',
+    link: '/tech',
+    icon: GrTechnology,
   },
 ];

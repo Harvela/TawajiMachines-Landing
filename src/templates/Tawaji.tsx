@@ -8,7 +8,8 @@ import { services } from '@/utils/services';
 const backgroundImages = [
   '/assets/images/home/background.jpg',
   '/assets/images/home/background2.jpg',
-  'https://res.cloudinary.com/dzj9hndxv/image/upload/v1718123404/6f5f2598-b63c-4a65-b34a-f319c42321e3_cqxcyc.jpg',
+  '/assets/images/home/securityb.jpg',
+  '/assets/images/home/techback.jpg',
 ];
 
 const Tawaji: React.FC = () => {
@@ -57,11 +58,11 @@ const Tawaji: React.FC = () => {
           transform: scale(1.3);
         }
         .service-card.hovered {
-          transform: scale(1.2);
+          transform: scale(0.8);
           z-index: 20;
         }
       `}</style>
-      <div className="grid h-full md:grid-cols-3">
+      <div className="grid h-full md:grid-cols-4">
         {backgroundImages.map((image, index) => (
           <div key={index} className="relative h-full overflow-hidden">
             <img
@@ -80,36 +81,38 @@ const Tawaji: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className="absolute left-0 top-0 mt-[60px] flex h-[100vh] w-full flex-col justify-between">
+      <div className="absolute left-0 top-0 flex h-[100vh] w-full flex-col justify-between py-[30px]">
         <TawajiNavbar />
-        <div className="flex h-[90vh] w-full flex-col items-center justify-center p-4 text-center md:p-0">
+        <div className="flex w-full flex-col items-center justify-center p-4 text-center md:mt-[24px] md:px-2 md:py-0">
           <Link href="#" className="flex flex-row items-center">
             <img
               src="/assets/images/home/logo.png"
-              className="h-16"
+              className="h-10 md:h-14"
               alt="Logo"
             />
-            <h1 className="text-5xl font-semibold text-white">TAWAJI</h1>
+            <h1 className="text-2xl font-semibold text-white md:text-4xl">
+              TAWAJI
+            </h1>
           </Link>
-          <h2 className="my-[30px] text-[14px] text-white/80 md:text-[24px]">
+          <h2 className="my-[18px] text-[16px] text-white/80 md:my-[30px] md:text-[24px]">
             L’entreprise qui vous offre des services de qualité
           </h2>
-          <div className="mt-[40px] grid gap-4 md:grid-cols-3 md:gap-16">
+          <div className="mt-[10px] grid gap-4 md:mt-[40px] md:grid-cols-4 md:gap-10">
             {services.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <div
                   key={index}
-                  className="service-card relative flex flex-col items-center justify-center rounded-lg bg-white px-12 py-8 shadow-lg transition-transform duration-500"
+                  className="service-card relative flex flex-col items-center justify-center rounded-lg bg-white px-12 py-4 shadow-lg transition-transform duration-500 md:py-8"
                 >
-                  <IconComponent className="text-[36px] text-primary-700" />
-                  <h2 className="my-[24px] text-[22px] font-semibold text-primary-700">
+                  <IconComponent className="text-[28px] text-primary-700 md:text-[36px]" />
+                  <h2 className="my-[12px] text-[16px] font-semibold text-primary-700 md:my-[18px]">
                     {service.name}
                   </h2>
                   <a
                     target="_blank"
                     href={service.link}
-                    className="flex flex-row items-center gap-2 rounded-lg bg-primary-700 px-8 py-1 text-[11px] text-white hover:bg-primary-700/80 md:text-sm"
+                    className="flex flex-row items-center gap-2 rounded-lg bg-primary-700 px-8 py-1 text-sm text-white hover:bg-primary-700/80"
                   >
                     <span>Visiter</span>
                     <IoIosArrowForward />
