@@ -81,38 +81,38 @@ const Tawaji: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className="absolute left-0 top-0 mt-[20px] flex h-[100vh] w-full flex-col justify-between md:mt-[60px]">
+      <div className="absolute left-0 top-0 mt-[20px] flex w-full flex-col justify-between md:mt-[40px]">
         <TawajiNavbar />
-        <div className="flex h-[100vh] w-full flex-col items-center justify-center p-4 text-center md:p-0">
+        <div className="flex w-full flex-col items-center justify-center p-4 text-center md:mt-[24px] md:px-2 md:py-0">
           <Link href="#" className="flex flex-row items-center">
             <img
               src="/assets/images/home/logo.png"
-              className="h-10 md:h-16"
+              className="h-6 md:h-14"
               alt="Logo"
             />
-            <h1 className="text-3xl font-semibold text-white md:text-5xl">
+            <h1 className="text-xl font-semibold text-white md:text-4xl">
               TAWAJI
             </h1>
           </Link>
-          <h2 className="my-[16px] text-[14px] text-white/80 md:my-[30px] md:text-[24px]">
+          <h2 className="my-[8px] text-[10px] text-white/80 md:my-[30px] md:text-[24px]">
             L’entreprise qui vous offre des services de qualité
           </h2>
-          <div className="mt-[40px] grid gap-4 md:grid-cols-4 md:gap-10">
+          <div className="mt-[10px] grid gap-3 md:mt-[40px] md:grid-cols-4 md:gap-10">
             {services.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <div
                   key={index}
-                  className="service-card relative flex flex-col items-center justify-center rounded-lg bg-white px-12 py-8 shadow-lg transition-transform duration-500"
+                  className="service-card relative flex flex-col items-center justify-center rounded-lg bg-white px-4 py-[10px] shadow-lg transition-transform duration-500 md:px-12 md:py-8"
                 >
-                  <IconComponent className="text-[36px] text-primary-700" />
-                  <h2 className="my-[24px] text-[22px] font-semibold text-primary-700">
+                  <IconComponent className="text-[10px] text-primary-700 md:text-[36px]" />
+                  <h2 className="my-[4px] text-[12px] font-semibold text-primary-700 md:my-[18px] md:text-[16px]">
                     {service.name}
                   </h2>
                   <a
                     target="_blank"
                     href={service.link}
-                    className="flex flex-row items-center gap-2 rounded-lg bg-primary-700 px-8 py-1 text-[11px] text-white hover:bg-primary-700/80 md:text-sm"
+                    className="flex flex-row items-center gap-1 rounded-sm bg-primary-700 px-2 py-[2px] text-[8px] text-white hover:bg-primary-700/80 md:gap-2 md:rounded-lg md:px-8 md:py-1 md:text-sm"
                   >
                     <span>Visiter</span>
                     <IoIosArrowForward />
