@@ -6,13 +6,13 @@ export const Recaptcha: React.FC<{ onChange: any }> = (props) => {
   }
   return (
     <div
-      className="absolute z-[100000] flex h-full w-full items-center justify-center bg-black/50 "
+      className="fixed left-0 top-0 z-[100000] flex h-full w-full items-center justify-center bg-black/50 "
       onClick={() => {
         onChange(null);
       }}
     >
       <ReCAPTCHA
-        sitekey={'6LfizL8pAAAAAKRf2feLhptrTu39ma_m0Ppx4vYP'}
+        sitekey={'6LfwiwkqAAAAALM6HnhDAUYjGqpVjLajdQsxp2Sl'}
         onChange={onChange}
         onError={() => onChange(null)}
         onAbort={() => onChange(null)}

@@ -1,9 +1,11 @@
 'use client';
 
+import 'react-toastify/dist/ReactToastify.css';
+
 import React from 'react';
 import { FaClock, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaPhoneVolume } from 'react-icons/fa6';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 
 import Input from '@/components/input';
 import { Recaptcha } from '@/components/recaptcha';
@@ -18,16 +20,17 @@ export function Contact() {
   const [isLoading, setIsLoading] = React.useState(false);
   const sendData = async () => {
     setIsLoading(true);
+
     const response = await fetch(
-      'https://admin.harvely.com/api/message-dug-assistants',
+      'https://admin.harvely.com/api/tawaji-messages',
       {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer 5d5a8ca3f0f2bc86426ab60cac04771576338d956b828a394033b6858839b6ddc9ff66505bb2749c479dab84a05a150713fe3e5755221b94808d249d00bbae832dbe8da37a9dd2c6f5bf580c3dc6bbde2b69c438d26f4edbefa42229b2f9e53353bc48870d62695e4b74d83ea5f1c103361422a323b189b1fb75830f9c31fb0e`,
+          Authorization: `Bearer c22b709f498dfbf2b4d5c191b30a73e0f794d5e5d4bb9d4acf125ad62176a081be49a8579e2fdad03c0cfe02b1564e1851214863605a872a11e66b3ed1839a5042b9ccb65ee6cb53e7802a41c586f9788a1a598d6740f40cd8715250c3abe97f4e4280270ab7070dc328af8fe8449a4f83fe308124022bb75aadcdb55371ad85`,
         },
         body: JSON.stringify({
-          data: { firstname, lastname, email, phone, message },
+          data: { nom: firstname, postNom: lastname, email, phone, message },
         }),
       },
     );
@@ -41,6 +44,19 @@ export function Contact() {
       setShowRecaptcha(false);
       toast.success(
         'Merci de votre message, un membre de notre équipe va bientot vous contacter.',
+        {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        },
+      );
+    } else {
+      toast.error(
+        "Une erreur est survenue lors de l'envoi de votre message, veuillez réessayer.",
         {
           position: 'top-right',
           autoClose: 5000,
@@ -147,6 +163,17 @@ export function Contact() {
           <button
             className="h-[50px] w-[60%] rounded-md bg-primary-700 px-4 py-2 font-semibold text-white md:w-[30%]"
             onClick={() => {
+              if (!email) toast.error('Veuillez renseigner votre email');
+              if (!firstname) toast.error('Veuillez renseigner votre nom');
+              if (!lastname) toast.error('Veuillez renseigner votre post-nom');
+              if (!phone)
+                toast.error('Veuillez renseigner votre numéro de téléphone');
+              if (!message) toast.error('Veuillez renseigner votre message');
+
+              if (!email || !firstname || !lastname || !phone || !message) {
+                setIsLoading(false);
+                return;
+              }
               if (isLoading) return;
               setShowRecaptcha(true);
             }}
@@ -155,12 +182,13 @@ export function Contact() {
           </button>
         </div>
         <iframe
-          title="Tawaji Construction Machines"
+          title="Tawaji Construction"
           src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3907.0928762382046!2d27.500672!3d-11.687830000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDQxJzE2LjIiUyAyN8KwMzAnMDIuNCJF!5e0!3m2!1sfr!2scd!4v1718598724909!5m2!1sfr!2scd"
           style={{ border: 0 }}
           className="h-[500px] w-full md:h-auto md:w-[60%]"
         ></iframe>
       </div>
+      <ToastContainer />
     </div>
   );
 }
