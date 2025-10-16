@@ -7,11 +7,11 @@ export const team = [
     mail: 'saidibin@tawaji.net',
   },
   {
-    name: 'Christianne Masele',
+    name: 'Emmanuella Bamporiki',
     role: 'SECRETAIRE',
     icon: '/assets/images/home/why.jpg',
-    phone: '+243 900992697',
-    mail: 'maselechristianne@tawaji.net',
+    phone: '+243 995028150',
+    mail: 'emmanuella@tawaji.net',
   },
   // {
   //   name: 'Team member',
