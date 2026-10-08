@@ -99,7 +99,7 @@ export const services = [
   },
   {
     name: 'TAWAJI Travel',
-    link: 'https://e-ticket-virid.vercel.app',
+    link: 'https://travel.tawaji-congo.com',
     icon: BsSend,
   },
   {

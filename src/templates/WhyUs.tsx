@@ -1,5 +1,7 @@
 import { FaCheck } from 'react-icons/fa';
 
+import { cloudinaryUrl } from '@/utils/cloudinary';
+
 const WhyUs = () => {
   return (
     <div
@@ -8,8 +10,13 @@ const WhyUs = () => {
     >
       <div className="relative h-[40vh] w-[95%] gap-8 rounded-lg bg-primary-700 md:h-[80vh] md:w-[40%]">
         <img
-          src="https://res.cloudinary.com/dzj9hndxv/image/upload/v1717816447/20240527_112731_page-0001_1_liecgs.jpg"
+          src={cloudinaryUrl(
+            'https://res.cloudinary.com/dzj9hndxv/image/upload/v1717816447/20240527_112731_page-0001_1_liecgs.jpg',
+            'w_1000,f_auto,q_auto',
+          )}
           alt="Logo"
+          loading="lazy"
+          decoding="async"
           className="z-40 ml-[15px] mt-[-15px] h-full w-full rounded-lg object-cover md:ml-[30px] md:mt-[-30px]"
         />
         <div className="absolute bottom-0 left-0 ml-[15px] rounded-tr-lg bg-primary-700 px-4 py-2 text-center font-semibold text-white md:ml-[30px] md:px-8 md:py-4">

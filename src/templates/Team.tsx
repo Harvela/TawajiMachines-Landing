@@ -19,7 +19,9 @@ const Team = () => {
               <img
                 src={t.icon}
                 alt={`${t.name}`}
-                className="md:h-50 md:w-50 h-20 w-20 rounded-full"
+                loading="lazy"
+                decoding="async"
+                className="md:h-50 md:w-50 h-20 w-20 rounded-full object-cover"
               />
               <div className="mt-2 flex flex-col items-center gap-2">
                 <h2 className="text-[18px] font-semibold">{t.name}</h2>

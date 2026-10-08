@@ -1,11 +1,15 @@
 import Link from 'next/link';
 
+import { cloudinaryUrl } from '@/utils/cloudinary';
+
 const Services = () => {
   return (
     <div id="categories" className="relative mt-10 md:mt-20 md:h-full">
       <img
         src="/assets/images/home/background.jpg"
         alt="Hero"
+        loading="lazy"
+        decoding="async"
         className="hidden h-[100vh] w-full object-cover md:block"
       />
       <div className="w-full px-4 md:absolute md:left-0 md:top-0 md:h-[100vh] md:bg-[#FFFFFF]/80 md:px-16 md:py-4">
@@ -15,8 +19,13 @@ const Services = () => {
         <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
           <div className="flex h-[500px] flex-col rounded-lg bg-white text-black shadow-md md:h-[80vh]">
             <img
-              src="https://res.cloudinary.com/dzj9hndxv/image/upload/v1717816366/20240523_123434_page-0001_1_ocljak.jpg"
+              src={cloudinaryUrl(
+                'https://res.cloudinary.com/dzj9hndxv/image/upload/v1717816366/20240523_123434_page-0001_1_ocljak.jpg',
+                'w_800,f_auto,q_auto',
+              )}
               alt=""
+              loading="lazy"
+              decoding="async"
               className="h-[65%] w-full object-cover md:h-[50%]"
             />
             <div className="flex flex-col gap-4 p-4">
@@ -38,8 +47,13 @@ const Services = () => {
 
           <div className="flex h-[500px] flex-col rounded-lg bg-white text-black shadow-md md:h-[80vh]">
             <img
-              src="https://res.cloudinary.com/dzj9hndxv/image/upload/v1718123404/6f5f2598-b63c-4a65-b34a-f319c42321e3_cqxcyc.jpg"
+              src={cloudinaryUrl(
+                'https://res.cloudinary.com/dzj9hndxv/image/upload/v1718123404/6f5f2598-b63c-4a65-b34a-f319c42321e3_cqxcyc.jpg',
+                'w_800,f_auto,q_auto',
+              )}
               alt=""
+              loading="lazy"
+              decoding="async"
               className="h-[65%] w-full object-cover md:h-[50%]"
             />
             <div className="flex flex-col gap-4 p-4">
@@ -61,8 +75,13 @@ const Services = () => {
 
           <div className="flex h-[500px] flex-col rounded-lg bg-white text-black shadow-md md:h-[80vh]">
             <img
-              src="https://res.cloudinary.com/dzj9hndxv/image/upload/v1718124642/WhatsApp_Image_2024-06-11_at_18.49.40_akphyz.jpg"
+              src={cloudinaryUrl(
+                'https://res.cloudinary.com/dzj9hndxv/image/upload/v1718124642/WhatsApp_Image_2024-06-11_at_18.49.40_akphyz.jpg',
+                'w_800,f_auto,q_auto',
+              )}
               alt=""
+              loading="lazy"
+              decoding="async"
               className="h-[65%] w-full object-cover md:h-[50%]"
             />
             <div className="flex flex-col gap-4 p-4">
